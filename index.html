@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EventFuel - powering your events with a dynamic content iOS app</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="description" content="Flexible event apps with instant content management. Containing Speaker biographies, Agenda, FAQ, Survey, Notes and Sketches, Attendee Profiles">
+  <meta name="author" content="Tasboa Sociedade Unipessoal 2013">
+
+  <!-- Load bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+  <!-- Load pixels -->
+  <link href="css/the-story.css" rel="stylesheet" media="screen">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="img/ef.png">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="/js/html5shiv.js"></script>
+      <script src="/js/respond.min.js"></script>
+      <![endif]-->
+<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBTbR3YcJI7ptSMWCQwav-rw-KzaW0SMic&sensor=false&extension=.js'></script> 
+ 
+<script> 
+    google.maps.event.addDomListener(window, 'load', init);
+    var map;
+    function init() {
+        var mapOptions = {
+            center: new google.maps.LatLng(16.615138,58.992918),
+            zoom: 2,
+            zoomControl: true,
+            zoomControlOptions: {
+                style: google.maps.ZoomControlStyle.LARGE,
+            },
+            disableDoubleClickZoom: true,
+            mapTypeControl: false,
+            scaleControl: true,
+            scrollwheel: true,
+            panControl: false,
+            streetViewControl: false,
+            draggable : true,
+            overviewMapControl: false,
+            overviewMapControlOptions: {
+                opened: false,
+            },
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            styles: [
+  {
+    "featureType": "water",
+    "elementType": "geometry.fill",
+    "stylers": [
+      { "color": "#d3d3d3" }
+    ]
+  },{
+    "featureType": "transit",
+    "stylers": [
+      { "color": "#808080" },
+      { "visibility": "off" }
+    ]
+  },{
+    "featureType": "road.highway",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      { "visibility": "on" },
+      { "color": "#b3b3b3" }
+    ]
+  },{
+    "featureType": "road.highway",
+    "elementType": "geometry.fill",
+    "stylers": [
+      { "color": "#ffffff" }
+    ]
+  },{
+    "featureType": "road.local",
+    "elementType": "geometry.fill",
+    "stylers": [
+      { "visibility": "on" },
+      { "color": "#ffffff" },
+      { "weight": 1.8 }
+    ]
+  },{
+    "featureType": "road.local",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      { "color": "#d7d7d7" }
+    ]
+  },{
+    "featureType": "poi",
+    "elementType": "geometry.fill",
+    "stylers": [
+      { "visibility": "on" },
+      { "color": "#ebebeb" }
+    ]
+  },{
+    "featureType": "administrative",
+    "elementType": "geometry",
+    "stylers": [
+      { "color": "#a7a7a7" }
+    ]
+  },{
+    "featureType": "road.arterial",
+    "elementType": "geometry.fill",
+    "stylers": [
+      { "color": "#ffffff" }
+    ]
+  },{
+    "featureType": "road.arterial",
+    "elementType": "geometry.fill",
+    "stylers": [
+      { "color": "#ffffff" }
+    ]
+  },{
+    "featureType": "landscape",
+    "elementType": "geometry.fill",
+    "stylers": [
+      { "visibility": "on" },
+      { "color": "#efefef" }
+    ]
+  },{
+    "featureType": "road",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      { "color": "#696969" }
+    ]
+  },{
+    "featureType": "administrative",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      { "visibility": "on" },
+      { "color": "#737373" }
+    ]
+  },{
+    "featureType": "poi",
+    "elementType": "labels.icon",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  },{
+    "featureType": "poi",
+    "elementType": "labels",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  },{
+    "featureType": "road.arterial",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      { "color": "#d6d6d6" }
+    ]
+  },{
+    "featureType": "road",
+    "elementType": "labels.icon",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  },{
+  },{
+    "featureType": "poi",
+    "elementType": "geometry.fill",
+    "stylers": [
+      { "color": "#dadada" }
+    ]
+  }
+],
+        }
+        var mapElement = document.getElementById('map-canvas');
+        var map = new google.maps.Map(mapElement, mapOptions);
+        var locations = [
+['Our headquarters', '', 'undefined', 'team@tasboa.com', 'undefined', 38.7039573, -9.1778972, 'https://mapbuildr.com/assets/img/markers/solid-pin-black.png'],['in Switzerland', 'undefined', 'undefined', '', 'undefined', 46.5195985, 6.5684919, 'https://mapbuildr.com/assets/img/markers/solid-pin-black.png'],['in Australia', 'undefined', 'undefined', 'undefined', 'undefined', -25.274398, 133.775136, 'https://mapbuildr.com/assets/img/markers/solid-pin-black.png']
+        ];
+        for (i = 0; i < locations.length; i++) {
+      if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
+      if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
+      if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
+           if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
+           if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
+            marker = new google.maps.Marker({
+                icon: markericon,
+                position: new google.maps.LatLng(locations[i][5], locations[i][6]),
+                map: map,
+                title: locations[i][0],
+                desc: description,
+                tel: telephone,
+                email: email,
+                web: web
+            });
+link = '';            bindInfoWindow(marker, map, locations[i][0], description, telephone, email, web, link);
+     }
+ function bindInfoWindow(marker, map, title, desc, telephone, email, web, link) {
+      var infoWindowVisible = (function () {
+              var currentlyVisible = false;
+              return function (visible) {
+                  if (visible !== undefined) {
+                      currentlyVisible = visible;
+                  }
+                  return currentlyVisible;
+               };
+           }());
+           iw = new google.maps.InfoWindow();
+           google.maps.event.addListener(marker, 'click', function() {
+               if (infoWindowVisible()) {
+                   iw.close();
+                   infoWindowVisible(false);
+               } else {
+                   var html= "<div style='color:#000;background-color:#fff;padding:5px;width:150px;'><h4>"+title+"</h4></div>";
+                   iw = new google.maps.InfoWindow({content:html});
+                   iw.open(map,marker);
+                   infoWindowVisible(true);
+               }
+        });
+        google.maps.event.addListener(iw, 'closeclick', function () {
+            infoWindowVisible(false);
+        });
+ }
+}
+
+</script>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+
+</head>
+
+<!-- activate scrollspy -->
+
+<body id="top" data-spy="scroll" data-target=".navbar" data-offset="50">
+  <nav class="navbar transparent navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar-container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img src="img/brand2.png" alt="EventFuel" title="EventFuel" style="height:36px">
+        </a>
+        <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <i class="icon-reorder"></i>
+        </a>
+      </div>
+      <div id="nav-collapse" class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a title="Check out our awesome services" href="https://rita.eventfuel.io/admins/sign_in" class=" scroll brand-4">Sign up</a></li>
+          <li><a title="Home page" class="scroll brand-1" href="#home">Home</a></li>
+          <li><a title="Check out our awesome services" href="#features" class=" scroll brand-4">Features</a></li>
+          <li><a title="Who we are" href="#about" class="scroll fadeto brand-4"> About us</a></li>
+          <li><a title="Get in touch!" href="#contact" class="scroll brand-2">Contact</a></li>
+        </ul>
+      </div>
+    </div><!-- /.navbar-container -->
+  </nav>
+
+  <!-- Home Page -->
+  <div id="home" class="back_img">
+    <div class="inner-page">
+      <h2 class="page-headline large">It's time to lift your events</h2>
+      <h5>Beautiful iOS app and powerful event manager</h5>
+    </div>
+    
+   <!-- /#home -->
+
+    <!-- Sign up -->
+    <div class="sign-up nav signup_img">
+      <div class="col-md-12 inner-page">
+        <div class="col-md-7">
+          <h6>Sign up now and our team will help you set up your first event!</h6>  
+          <input type="name" class="input-sm form pull-left" placeholder="Your name">
+          <input type="email" class="input-sm form pull-left" placeholder="Your email">
+          <a href="#contact" class="btn color-1 pull-left" title="Sign up!"></i>Sign up!</a>
+        </div>
+        <div class="col-md-3">
+          <h6>Want to see for yourself?</h6>
+          <a class="btn color-1" title="Contact Us!"></i> Contact Us</a>
+          
+        </div>
+      </div>
+      </div>
+   
+  </div><!-- /.sign-up -->
+
+<!-- Why Eventfuel page-->
+  <div id="why">
+    <div class="inner-page">
+      <div class="col-md-12 row">
+        <h2 class="page-headline">Why Eventfuel?</h2>
+        <div class="col-md-3 col-md-push-1">
+          <img class="img-responsive" src="img/paper.png" alt="Stop using paper">
+          <h3 class="color-6">Stop using paper</h3>
+          <h5>Less hassle, time and money</h5>
+            <p>Event programmes are pricey, time consuming and get easily outdated. 
+            Have an interactive event agenda with all the information you need</p>
+        </div>  
+        <div class="col-md-3 col-md-push-2">
+          <img class="img-responsive" src="img/oneclick.png" alt="Stop using paper">
+          <h3 class="color-6">Make last minute changes</h3>
+          <h5>With just one click</h5>
+            <p>Never have your information outdated, your attendees will always have access to the most recent, updated details of your event</p>
+        </div>    
+        <div class="col-md-3 col-md-push-3">
+          <img class="img-responsive" src="img/stats.png" alt="Stop using paper">
+          <h3 class="color-6">Get results fast</h3>
+          <h5>Know what your atendees think</h5>
+            <p>Never have to go through stacks of paper surveys to get your results, online and interactive customisable surveys will do the job</p>
+        </div>   
+      </div>
+    </div>
+  </div>
+  <!-- /#why -->
+
+
+  <!-- Feature page-->
+  <div id="features" class="features_img">
+    <div class="inner-page row">
+      <div class="col-md-6 row">
+        <ul class="features list-inline">
+          <h2>With Eventfuel you will be able to:</h2>
+          <li>
+            <i class="icon-list pull-left"></i><h3 class="color-6">Create one or multiple events fast</h3>
+            <p>You can create templates, duplicate events and always access your previous data......</p>
+          </li>
+          <li>
+            <i class="icon-calendar pull-left"></i><h3 class="color-6">Create detailed agendas</h3>
+            <p>Create easily updated agendas, never worry about last minute changes again</p>
+          </li>
+          <li>
+            <i class="icon-cog pull-left"></i><h3 class="color-6">Customise your events</h3>
+            <p>Customise not only colors and layout, customise your event flow. Organise your atendees into groups and customise what they see</p>
+          </li>
+          <li>
+            <i class="icon-user pull-left"></i><h3 class="color-6">Get feedback from your atendees</h3>
+            <p>Never go through stacks of paper surveys again. Get your results automatically with interactive customisable surveys</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div> <!-- /#features -->
+
+    <!-- Built to amaze page-->
+  <div id="amaze" class="amaze_img">
+    <div class="inner-page">
+      <div class="col-md-8 row">
+        <h2 class="page-headline large">Built to amaze</h2>
+        <h3 class="page-headline">Highlight the power of iOS</h3>
+        <div class="big-list">
+          <ul>
+          <li>
+            <img class="img-responsive pull-left" src="img/intuitive.png" alt="Intuitive" height="60" width="60">
+            <h2>Simple and intuitive</h2>
+          </li>
+          <li>
+            <img class="img-responsive pull-left" src="img/safe.png" alt="Secure" height="60" width="60">
+            <h2>Secure</h2>
+          </li>
+          <li>
+            <img class="img-responsive pull-left" src="img/customisable.png" alt="Customisable" height="60" width="60">
+            <h2>Customisable</h2>
+          </li>
+        </ul>
+        </div>
+      </div>
+    </div>
+    <div id="facts" class="col-md-12">
+      <div class="fact"><b>40</b> COUNTRIES</div>
+      <div class="fact"><b>5</b> CONTINENTS</div>
+      <div class="fact"><b>10</b> LANGUAGES</div>
+      <div class="fact">OVER <b>30 000</b> ATENDEES</div>
+    </div> 
+  </div> <!-- /#amaze -->
+
+   <!-- Instantly customisable-->
+  <div id="customisable">
+    <div class="inner-page">
+      <div class="col-md-7 row">
+        <h2 class="page-headline large">Instantly</h2>
+        <h2 class="page-headline">Customisable</h2>
+        <ul class="list-wide">
+        <li><i class="icon-check"></i> Event Agenda</li>
+        <li><i class="icon-check"></i> Speaker Bios</li>
+        <li><i class="icon-check"></i> Survey Questions (optional)</li>
+        <li><i class="icon-check"></i> Frequently Asked Questions (optional)</li>
+        <li><i class="icon-check"></i> Scheduled Polls (optional)</li>
+        <li><i class="icon-check"></i> Attendee details</li>
+        </ul>
+      </div>
+      <div class="col-md-5 inner-page">
+        <img class="img-responsive" src="img/two-phones.png" alt="Customisable">
+      </div>  
+    </div>
+  </div>
+
+
+
+<!--     <hr> -->
+
+    <!-- Video -->
+<!--     <div class="row inner-page">
+      <div class="col-md-6 col-md-push-6">
+        <div class="btn-container figurette">
+          <img src="img/video.png" alt="Play video" />
+          <a class="lightbox iframe btn-play" target="_blank" href="http://www.youtube.com/watch?v=TkjewTiebhk"><i class="icon-play"></i></a>
+        </div>
+      </div>
+      <div class="col-md-6 col-md-pull-6">
+        <ul class="big-list">
+          <li><i class="icon-lock"></i> Secure</li>
+          <li><i class="icon-edit"></i> Paperless</li>
+          <li><i class="icon-cloud-download"></i> Offline Access</li>
+          <li><i class="icon-desktop"></i> Intuitive interface</li>
+          <li><i class="icon-bar-chart"></i> Metrics and Analytics</li>
+        </ul>
+      </div>
+    </div> -->
+
+
+
+
+
+  <!--
+Contact page -->
+  <div id="contact" class="page color-2">
+    <div class="inner-page">
+      <h2 class="page-headline">Get in touch and stay informed.</h2>
+    </div>
+    <div class="row inner-page contact">
+      <div class="col-md-6">
+        <form id="contact-form" method="GET" enctype="text/plain" action="mailto:contact@geteventfuel.com">
+          <input type="text" class="form-control" placeholder="Your name">
+          <input type="email" class="form-control" placeholder="Your email" name="email">
+          <textarea rows="6" class="form-control" placeholder="Your message" name="body"></textarea>
+          <input type="submit" class="btn btn-primary color-1 btn-centered" value="Contact us">
+        </form>
+      </div>
+      <div class="col-md-6">
+        <div id="map-canvas">
+
+        </div>
+        <div id="address">
+          <h6>Rua Rodrigues Faria 103 ED 1 Espaço 403 LX Factory <br>1300-501 Lisbon PORTUGAL<br>team@tasboa.com</h6>
+        </div>
+        </div>
+      </div>
+  </div> <!-- /#contact -->
+
+
+  <!-- The footer, social media icons, and copyright -->
+  <footer class="page color-5">
+    <div class="inner-page row">
+      <div class="col-md-6 social">
+        <a href="https://twitter.com/geteventfuel"><i class="icon-twitter"></i></a>
+        <a href="https://facebook.com/geteventfuel"><i class="icon-facebook-sign"></i></a>
+      </div>
+      <div class="col-md-6 text-right copyright">
+        &copy; 2015 <a href="http://tasboa.com" title="A product of Tasboa">tasboa.com</a> | all rights reserved | <a href="#top" title="Got to top" class="scroll">To top <i class="icon-caret-up"></i></a>
+      </div>
+    </div>
+  </footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>
+  if (typeof jQuery == 'undefined') {
+    document.write(unescape("%3Cscript src='js/jquery-1.9.1.min.js' type='text/javascript'%3E%3C/script%3E"));
+  }
+  </script>
+
+  <!-- Minimize in production. -->
+
+  <script src="js/lazyload.js"></script>
+  <script src="js/spin.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/lightbox.min.js"></script>
+
+  <!-- Main js fail. -->
+  <script src="js/main.js"></script>
+
+  <!-- History just for index page -->
+  <script src="js/jquery.history.js"></script>
+  <script>
+  // History, and back button
+  $(function() {
+    jQuery.history.listen()
+    $('.nav .scroll').click(function() {
+      $.history.push('index.html' + $(this).attr('href'));
+    });
+
+    // $('.panel:first-child').find('.panel-body').collapse('hide');
+
+    // $('.panel').on('click', function(e){
+    //   //e.preventDefault();
+    //   $(this).parents('div.panel-group').find('.panel').each(function(){
+    //     if($(this).find('.panel-heading').hasClass('active'))
+    //       $(this).find('.panel-body').collapse('hide');
+      });
+    });
+  });
+  </script>
+</body>
+</html>
