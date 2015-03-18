@@ -1496,28 +1496,16 @@ a .icon-flip-vertical:before {
   color: #ffffff;
 }
 .color-2 {
-  background: #438eb9;
+  background: #4d7ed8;
   color: #ffffff;
 }
 .color-3 {
   background: #6a8bdb;
 }
-
-h5 {
-  text-align: center;
-  color: white;
-  font-size: 25px;
-}
-h6 {
-  color: white;
-  text-align: center;
-  margin-top: 5px !important;
-  margin-bottom: 5px !important;
-}
-
 .color-3 h1,
 .color-3 h2,
 .color-3 h3,
+.color-3 h4,
 .color-3 h5,
 .color-3 h6 {
   color: #000000;
@@ -1529,7 +1517,7 @@ h6 {
   color: #ffffff;
 }
 .color-4 {
-  background: #EEEEEE;
+  background: #ffffff;
   color: #333;
 }
 .color-4 h1,
@@ -1550,27 +1538,16 @@ h6 {
   background: #010a0c;
   color: #ffffff;
 }
-.color-6 {
-  color: #0061D0;
-  font-family: 'PT Sans', sans-serif;
-  font-weight: 700;
-  font-size: 9px;
-}
 /* Layout */
 .page {
   padding-top: 70px;
 }
-
 .inner-page {
-  display: block;
+  padding-top: 30px;
+  padding-bottom: 30px;
   max-width: 1100px;
   margin: 0 auto;
-  height:     auto !important;
 }
-
-.inner-page .btn {
-  padding-top: 2px;
-} 
 .newsletter,
 footer {
   padding: 0!important;
@@ -1593,56 +1570,9 @@ footer a {
 /* Individual pages */
 /* -------------------------------------------------- */
 /* Home page */
-
-*{
-  font-family: Helvetica;
-}
-
-/* Background images */
-.transparent {
-  background: url("../img/nav.png");
-}
-
-.back_img {
-  background: url(../img/background.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.features_img {
-  background: url(../img/base3.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.amaze_img {
-  background: url(../img/amaze.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.signup_img {
-  background: url(../img/bar.png); 
-  background-repeat: repeat-y;
-}
-
-.sign-up {
-  height: 70px;
-  margin-top: 383px;
-  width: 100%;
-}
-
-
 #home {
   margin-top: 0;
-  padding: 7% 0;
-  height: 100%;
+  padding: 80px 0;
 }
 /* About page */
 .team img {
@@ -1655,9 +1585,7 @@ footer a {
 .sign-up h4 {
   font-size: 26px;
 }
-
-/* Footer */
-.copyright {
+/* Footer */.copyright {
   line-height: 50px;
 }
 /* Newsletter */
@@ -1676,26 +1604,50 @@ footer a {
   width: 100%;
   text-indent: 10px;
 }
+/* Background images */
+.transparent {
+  background: url("../img/nav.png");
+}
+
+.back_img {
+  background: url(../img/background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+}
+
+.features_img {
+  background: url(../img/base3.jpg) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.amaze_img {
+  background: url(../img/amaze.jpg) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.signup_img {
+  background: url(../img/bar.png); 
+  background-repeat: repeat-y;
+}
 /* Navigation */
 /* -------------------------------------------------- */
-
-.box {
-  padding: 30px;
-  border-radius: 10px;
-}
 .navbar {
-  height: 60px; 
   border: 0;
-}
-.navbar-brand img{
-  margin-bottom: 10px;
 }
 .navbar ul {
   font-size: 15px;
   margin: 0;
 }
 .navbar .navbar-container {
-  padding-top: 10px;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -1708,19 +1660,19 @@ footer a {
 }
 /* Menu colors */
 .active .brand-1 {
-  background-color: #438eb9 !important;
+  background-color: #3a9ac4 !important;
 }
 .brand-1:hover {
-  background-color: #4d7ed8 !important;
+  background-color: #0061d1 !important;
 }
 .active .brand-2 {
-  background-color: #438eb9 !important;
+  background-color: #4d7ed8 !important;
 }
 .brand-2:hover {
   background-color: #4d7ed8 !important;
 }
 .active .brand-3 {
-  background-color: #438eb9 !important;
+  background-color: #4d7ed8 !important;
 }
 .brand-3:hover {
   background-color: #4d7ed8 !important;
@@ -1740,10 +1692,6 @@ a {
 a:hover {
   text-decoration: none;
 }
-/* Contacts */
-#contact h2 {
-  margin-top: 8% !important;
-}
 #contact-form textarea,
 #contact-form input {
   width: 100%;
@@ -1754,32 +1702,6 @@ a:hover {
 #contact-form .btn {
   margin-top: 25px;
 }
-.form input{
-  float: left;
-  outline: none !important;
-  -webkit-appearance: none;
-}
-::-webkit-input-placeholder {
-   padding-left: 5px;
-}
-
-:-moz-placeholder { /* Firefox 18- */
-  padding-left: 5px;
-}
-
-::-moz-placeholder {  /* Firefox 19+ */
-  padding-left: 5px;
-}
-
-:-ms-input-placeholder {  
-  padding-left: 5px;
-}
-.form {
-  border: none !important;
-  margin-right: 15px;
-  height:30px;
-}
-
 hr {
   width: 50%;
   margin: 30px auto;
@@ -1791,6 +1713,14 @@ ul {
 .list-inline li {
   display: inline-block;
   padding-right: 8px;
+}
+.signup {
+  padding-left: 10%;
+  color: white;
+  font-weight: 800;
+  height: 80px;
+  background-color: #438eb9;
+  width: 100% !important;
 }
 /* Clients list */
 .clients h2 {
@@ -1813,90 +1743,74 @@ ul {
   cursor: pointer;
   background: #235c75;
 }
-
 /* Feature List */
-#features {
-  height: 100% !important;
-}
-
 .features {
+  text-align: center;
+}
+.features h3 {
+  font-size: 25px;
+}
+.features li {
+  max-width: 310px;
+  text-align: left;
+  margin: 0 10px;
+}
+.features li i {
+  color: #3a9ac4;
+  font-size: 32px;
+  padding-top: 30px;
+  float: left;
+}
+.features li img {
+  margin: auto;
+}
+/* Feature2 List */
+
+.features2 {
   text-align: left;
   margin-top: 20%;
 }
-.features h2 {
+.features2 h2 {
   font-size: 25px;
   padding-bottom: 30px;
 }
 
-.features li {
+.features2 li {
   text-align: left;
   margin: 0px 10px 0 30px;
 }
 
-.features li i {
+.features2 li i {
   min-height: 100px;
-  color: #000;
+  color: #0061D0;
   font-size: 40px;
-  padding-top: 0px;
+  padding-top: 30px;
   padding-right: 10px;
 }
-
-
-/* Why Eventfuel Page*/
-.features h3, 
-#why h3 {
+.color-6 {
+  color: #0061D0 !important;
+  font-weight: 700 !important;
   font-size: 20px;
-  color: #0061D0;
-  margin-top: 0px;
-}
-#why {
-  padding-top: 10%;
-  height:100%;
-  background-color: #A6D4E2;
 }
 
-#why h2 {
-  font-weight: 400;
-  color:black;
-  padding-bottom: 5%;
+.big-list {
+  font-size: 25px;
+  font-weight: 300;
 }
-#why h3 {
-  padding-top: 20px;
-  text-align: center;
+.big-list li {
+  line-height: 35px;
+  height: 50px;
+  margin: 10px;
 }
-
-
-#why h5 {
-  font-weight: 400;
-  margin-top: -10px;
-  color: grey;
-  font-size: 15px;
-}
-
-/* Built to amaze page */
-#amaze, #customisable {
-  height: 100%;
+.big-list i {
   float: left;
-  width: 100%;
-  display: block;
+  width: 50px;
+  font-size: 40px;
+  margin-right: 20px;
 }
-#amaze h2, 
-#amaze h3, 
-#customisable h2 {
-  text-align: left;
+.list-wide li {
+  padding: 5px 0;
 }
-#amaze h3 {
-  margin-top: 0px;
-  margin-bottom: 60px;
-}
-#amaze li{
-  display: block;
-  height: 100px;
-}
-#amaze img {
-  padding: 0 10px 0 10px; 
-}
-
 #facts {
   margin-top: 95px;
   height: 5%;
@@ -1914,43 +1828,6 @@ ul {
   float: left;
   display: inline-block;
 }
-/* Customisable */
-#customisable {
-  background: url(../img/cust_background.png) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-#customisable li, 
-#customisable i{
-  margin-top: 20px;
-  color: white;
-  font-size: 20px;
-}
-#customisable img {
-  margin-top: 30%;
-}
-.big-list {
-  font-size: 25px;
-  font-weight: 300;
-}
-.big-list li {
-  line-height: 35px;
-  height: 50px;
-  margin: 10px;
-  color: white;
-}
-.big-list i {
-  float: left;
-  width: 50px;
-  font-size: 40px;
-  margin-right: 20px;
-}
-.list-wide li {
-  padding: 5px 0;
-}
 /* Accordions */
 .panel {
   border: 0;
@@ -1959,11 +1836,11 @@ ul {
 .panel .panel-body {
   padding: 9px 15px;
   border-top: 0;
-  background: white;
+  background: #ecf9ff;
 }
 .panel .panel-heading {
-  color: black;
-  background: #EEE;
+  color: #ffffff;
+  background: #4baad3;
 }
 .panel .panel-heading i {
   margin-top: 5px;
@@ -1971,10 +1848,10 @@ ul {
   font-size: 18px;
 }
 .panel .panel-heading:hover {
-  background: #438eb9;
+  background: #3a9ac4;
 }
 .panel .panel-heading.active {
-  background: #579ec8;
+  background: #3a9ac4;
 }
 /* Tabs */
 .nav-tabs {
@@ -2013,12 +1890,9 @@ ul {
 }
 /* Buttons */
 .btn {
-  font-weight: 200;
+  font-weight: 400;
   color: #ffffff;
   border: 0;
-  height: 30px;
-  margin-right: 15px;
-  margin-left: 15px;
   -webkit-transition: background 0.6s;
   transition: background 0.6s;
 }
@@ -2027,6 +1901,14 @@ ul {
   margin: 0 auto;
   display: block;
 }
+  .btn-home {
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid grey;
+
+    height: 50px;
+
+  }
 /* Social Buttons */
 .social i {
   -webkit-transition: color 0.6s;
@@ -2075,23 +1957,6 @@ ul {
   opacity: 1;
 }
 /* Map button, including address */
-#map-canvas {
-        height:350px;
-        width:500px;
-    }
-    .gm-style-iw * {
-        display: block;
-        width: 100%;
-    }
-    .gm-style-iw h4, .gm-style-iw p {
-        margin: 0;
-        padding: 0;
-    }
-    .gm-style-iw a {
-        color: #4272db;
-    }
-
-
 .btn-map {
   margin: -35px 0 0 -35px;
   top: 50%;
@@ -2139,12 +2004,12 @@ ul {
 .page-headline {
   font-size: 42px;
   text-align: center;
-  color: white;
 }
 .large {
-  padding-top: 8%;
-  font-size: 52px;
-  font-weight: 600;
+  font-size: 62px;
+}
+.center {
+  text-align: center;
 }
 .lead {
   font-size: 22px;
@@ -2163,7 +2028,6 @@ strong {
 @media (max-width: 979px) {
   /* Layout */
   body {
-
     padding: 0;
   }
   #home,
@@ -2204,7 +2068,6 @@ strong {
   footer {
     padding: 0 40px!important;
   }
-
   .big-list li {
     height: auto;
     line-height: 30px;
@@ -2259,7 +2122,6 @@ strong {
 }
 /* Mobile phone */
 @media (max-width: 420px) {
-  
   .btn-map div {
     display: none;
   }
@@ -2282,7 +2144,7 @@ strong {
     float: none;
   }
   .pull-left {
-    float: left;
+    float: none;
   }
   .row {
     padding-top: 20px;
@@ -2307,7 +2169,6 @@ strong {
 /* -------------------------------------------------- */
 body {
   font-weight: 300;
-  height: 100%;
 }
 body,
 textarea:focus,
@@ -2317,9 +2178,7 @@ input:focus {
 }
 /* Remove horizontal scrollbar */
 html {
-  height: 100%; 
   overflow-x: hidden;
-
 }
 /* Selection color */
 ::selection {
