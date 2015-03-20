@@ -76,6 +76,21 @@ $(document).ready(function() {
         }
     });
 
+//change menu    
+
+$(document).on("scroll",function(){
+    if($(document).scrollTop()>200){
+        $(".navbar").removeClass("large").addClass("small");
+        $('#logo').attr('src', 'img/logosmall.png')
+    } else{
+        $(".navbar").removeClass("small").addClass("large");
+        $('#logo').attr('src', 'img/logolarge.png')
+    }
+});
+
+
+
+
     // .scroll class for link scrolling.
 
     $('.scroll[href^="#"]').bind('click.smoothscroll', function(e) {

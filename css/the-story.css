@@ -1571,8 +1571,13 @@ footer a {
 /* -------------------------------------------------- */
 /* Home page */
 #home {
+  height: 800px;
   margin-top: 0;
   padding: 80px 0;
+}
+
+#home img {
+  margin-top: 30px;
 }
 /* About page */
 .team img {
@@ -1604,9 +1609,14 @@ footer a {
   width: 100%;
   text-indent: 10px;
 }
-/* Background images */
-.transparent {
-  background: url("../img/nav.png");
+/* NavBar */
+.navbar {
+    background-color:transparent;
+    color: #fff;
+    position:fixed;
+    top:0;
+    width:100%;
+    padding: 20px 0;
 }
 
 .back_img {
@@ -1634,10 +1644,6 @@ footer a {
   background-size: cover;
 }
 
-.signup_img {
-  background: url(../img/bar.png); 
-  background-repeat: repeat-y;
-}
 /* Navigation */
 /* -------------------------------------------------- */
 .navbar {
@@ -1714,13 +1720,15 @@ ul {
   display: inline-block;
   padding-right: 8px;
 }
-.signup {
-  padding-left: 10%;
+.facts {
   color: white;
   font-weight: 800;
-  height: 80px;
+  height: 60px;
   background-color: #438eb9;
   width: 100% !important;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 /* Clients list */
 .clients h2 {
@@ -1749,6 +1757,9 @@ ul {
 }
 .features h3 {
   font-size: 25px;
+}
+.features p {
+  font-size: 14px;
 }
 .features li {
   max-width: 310px;
@@ -1793,6 +1804,12 @@ ul {
   font-size: 20px;
 }
 
+h5 {
+  margin-top: -10px;
+  margin-bottom: 40px;
+  color: #4586ae !important;
+}
+
 .big-list {
   font-size: 25px;
   font-weight: 300;
@@ -1810,23 +1827,6 @@ ul {
 }
 .list-wide li {
   padding: 5px 0;
-}
-#facts {
-  margin-top: 95px;
-  height: 5%;
-  background-color: black;
-  width: 100% !important;
-  min-width: 100%;
-  float: left;
-  display: block;
-}
-
-.fact {
-  color: white;
-  font-size: 20px;
-  margin: 5px 4% 5px 4%;
-  float: left;
-  display: inline-block;
 }
 /* Accordions */
 .panel {
@@ -2581,6 +2581,25 @@ img.mfp-img {
     margin-left: 5px;
   }
 }
+@media screen and (min-width: 800px) {
+.navbar img{ margin-top: 2px; margin-left: -10px; }
+
+/* Sizes for the bigger menu */
+.navbar.large { height: 120px !important; }
+.navbar.large li{ margin-top: 10px; }
+/* Sizes for the smaller menu */
+.navbar.small { height: 50px !important; background-color:rgba(0,0,0,0.6);}
+.navbar.small img {width: 90%; margin-top: -10px;}
+.navbar.small li{ margin-top: -15px; }
+
+header,.navbar, a, img, li {
+  transition: all 1s;
+  -moz-transition: all 1s; /* Firefox 4 */
+  -webkit-transition: all 1s; /* Safari and Chrome */
+  -o-transition: all 1s; /* Opera */
+}
+}
+
 @media all and (max-width: 800px) {
   .mfp-arrow {
     -webkit-transform: scale(0.75);

@@ -26,11 +26,12 @@
 <!-- activate scrollspy -->
 
 <body id="top" data-spy="scroll" data-target=".navbar" data-offset="50">
-  <nav class="navbar transparent navbar-default navbar-fixed-top" role="navigation">
+  <header class="large">
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="navbar-container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">
-          <img src="img/brand.png" alt="EventFuel" title="EventFuel" style="height:30px;">
+        <a class="navbar-brand scroll" href="#home">
+          <img src="img/logolarge.png" alt="EventFuel" title="EventFuel" id="logo">
         </a>
         <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
           <span class="sr-only">Toggle navigation</span>
@@ -39,7 +40,7 @@
       </div>
       <div id="nav-collapse" class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a title="Home page" class="scroll brand-1" href="#home">Home</a></li>
+          <li><a title="Sign Up Now" href="#" class=" scroll brand-4">Sign Up</a></li>
           <li><a title="Check out our awesome services" href="#features" class=" scroll brand-4">Features</a></li>
           <li><a title="Who we are" href="#about" class="scroll fadeto brand-4"> About us</a></li>
           <li><a title="Get in touch!" href="#contact" class="scroll brand-2">Contact</a></li>
@@ -47,33 +48,47 @@
       </div>
     </div><!-- /.navbar-container -->
   </nav>
+</header>
 
   <!-- Home Page -->
   <div id="home" class="page back_img">
     <div class="inner-page">
-      <h2 class="page-headline large">It's time to lift your events</h2>
-      <h3 class="center" style="min-height: 300px">Beautiful iOS app and powerful event manager</h3>
+       <div class="col-md-6 col-md-offset-3 lazy-container">
+        <img class="lazy" alt="Looks great on every device" src="img/pixel.png" data-original="img/home2.png" />
+      </div>
     </div>
+        <div class="col-md-8 col-md-offset-2 center">
+      <h3>Change the way you manage your events</h3>
+      </div>
     <div class="row inner-page">
       <div class="col-md-4 col-md-offset-4">
       <p class="center">Sign up now and our team will help you set up your first event</p>  
-      <a href="#features" title="Check out more freatures!" class="scroll btn btn-centered btn-home">Sign up now</a>
+      <a href="#features" title="Check out more freatures!" class="teste scroll btn btn-centered btn-home">Sign up now</a>
       </div>
     </div>
   </div> <!-- /#home -->
 
-  <!-- Sign up -->
-      <ul class="signup list-inline">
-        <li><h3><b>40</b> COUNTRIES</h3></li>
-        <li><h3><b>5</b> CONTINENTS</h3></li>
-        <li><h3><b>10</b> LANGUAGES</h3></li>
-        <li><h3>OVER <b>30 000</b> ATENDEES</h3></li>
-      </ul><!-- /.sign-up -->
+  <!-- Facts -->
+  <div class="row">
+    <ul class="facts list-inline">
+      <div class="col-md-3">
+        <li><h4><b>40</b> COUNTRIES</h4></li>
+      </div>
+      <div class="col-md-3">  
+        <li><h4><b>5</b> CONTINENTS</h4></li>
+      </div>
+      <div class="col-md-3">  
+        <li><h4><b>10</b> LANGUAGES</h4></li>
+      </div>
+      <div class="col-md-3">  
+        <li><h4>OVER <b>30 000</b> ATENDEES</h4></li>
+        </div>
+      </ul><!-- /.facts -->
 
   <!-- Feature page-->
   <div id="features" class="page color-4">
     <div class="inner-page">
-      <h2 class="page-headline">Why EventFuel?</h2>
+      <h2 class="page-headline">Why choose EventFuel?</h2>
     </div>
 
     <div class="inner-page row">
@@ -81,17 +96,20 @@
         <li>
           <img class="img-responsive" src="img/paper.png" alt="Stop using paper">
           <h3 class="center">Stop using paper</h3>
+          <h5 class="center">Less hassle, time and money</h5>
           <p>Event programmes are pricey, time consuming and get easily outdated. 
             Have an interactive event agenda with all the information you need</p>
         </li>
         <li>
           <img class="img-responsive" src="img/oneclick.png" alt="Stop using paper">
           <h3 class="center"> Last minute changes</h3>
+          <h5 class="center">With just one click</h5>
           <p>Never have your information outdated, your attendees will always have access to the most recent, updated details of your event</p>
         </li>
         <li>
           <img class="img-responsive" src="img/stats.png" alt="Stop using paper">
           <h3 class="center"> Get results fast</h3>
+          <h5 class="center">Know what your atendees want</h5>
           <p>Never have to go through stacks of paper surveys to get your results, online and interactive customisable surveys will do the job</p>
         </li>
       </ul>
@@ -221,10 +239,10 @@ Contact page -->
       </div>
     </div>
   </footer>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script>
   if (typeof jQuery == 'undefined') {
-    document.write(unescape("%3Cscript src='js/jquery-1.9.1.min.js' type='text/javascript'%3E%3C/script%3E"));
+    document.write(unescape("%3Cscript src='js/jquery-2.1.3.min.js' type='text/javascript'%3E%3C/script%3E"));
   }
   </script>
 
