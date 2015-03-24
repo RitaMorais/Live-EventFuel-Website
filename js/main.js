@@ -76,19 +76,28 @@ $(document).ready(function() {
         }
     });
 
+// //change menu    
+
+// $(document).on("scroll",function(){
+//     if($(document).scrollTop()>300) {
+//         $(".navbar").removeClass("large").addClass("small");
+//         // $('#logo').attr('src', 'img/brand.png')
+//     } else{
+//         $(".navbar").removeClass("small").addClass("large");
+//         // $('#logo').attr('src', 'img/logolarge.png')
+//     }
+// });
+
 //change menu    
 
 $(document).on("scroll",function(){
-    if($(document).scrollTop()>200){
-        $(".navbar").removeClass("large").addClass("small");
-        $('#logo').attr('src', 'img/logosmall.png')
+    if($(document).scrollTop()>300) {
+        $(".navbar").removeClass("home").addClass("dark");
     } else{
-        $(".navbar").removeClass("small").addClass("large");
-        $('#logo').attr('src', 'img/logolarge.png')
+        $(".navbar").removeClass("dark").addClass("home");
+
     }
 });
-
-
 
 
     // .scroll class for link scrolling.
