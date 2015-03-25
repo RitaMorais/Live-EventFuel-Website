@@ -1545,7 +1545,14 @@ a .icon-flip-vertical:before {
 .page {
   padding-top: 70px;
 }
+
 .inner-page {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.inner-page2 {
   padding-top: 30px;
   padding-bottom: 30px;
   max-width: 1100px;
@@ -1749,9 +1756,13 @@ ul {
   background: #235c75;
 }
 /* Feature List */
+.features {
+  padding-bottom: 50px;
+}
 .features h3 {
   font-size: 25px;
 }
+
 .features p, .features2 p {
   font-size: 15px;
 }
@@ -1767,6 +1778,12 @@ ul {
   float: left;
 }
 .features li img {
+  margin: auto;
+}
+.howdoI {
+  background-color: white;
+}
+.howdoI img {
   margin: auto;
 }
 /* Feature2 List */
