@@ -1539,6 +1539,9 @@ a .icon-flip-vertical:before {
   color: #ffffff;
 }
 /* Layout */
+#mapa {
+  margin-top: 25px;
+}
 .page {
   padding-top: 70px;
 }
@@ -1580,8 +1583,10 @@ footer a {
   margin-top: 30px;
 }
 #home h3 {
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
+  margin-top: -30px !important;
+}
+#home p {
+  margin-top: -20px !important;
 }
 /* About page */
 .team img {
@@ -1632,7 +1637,7 @@ footer a {
 }
 
 .features_img {
-  background: #CCC; 
+  background: #ebeef6; 
 
 }
 
@@ -1747,8 +1752,8 @@ ul {
 .features h3 {
   font-size: 25px;
 }
-.features p {
-  font-size: 14px;
+.features p, .features2 p {
+  font-size: 15px;
 }
 .features li {
   max-width: 310px;
@@ -2015,15 +2020,20 @@ strong {
 /* -------------------------------------------------- */
 @media (max-width: 979px) {
   .navbar {
-    background-color:rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.6);
+    max-height: 50px;
+}
+  .navbar.home {
+    background-color: rgba(0,0,0,0.6) !important;
 }
   /* Layout */
   body {
+    overflow-x: hidden;
     padding: 0;
   }
   #home,
   #sample-page {
-    padding: 1px 0;
+    padding: 20px 0;
   }
   [class*="col-md"] {
     padding: 0 60px;
@@ -2069,26 +2079,33 @@ strong {
 }
 /* Tablet */
 @media (max-width: 768px) {
-
-    .lazy-container {
-    padding-top: 30px;
+  #home {
+    height: 100% !important;
+  }
+  .features {
+    padding-left: 20px;
+  }
+  .lazy-container {
+    padding-top: 40px;
+    margin-bottom: 30px;
   }
   .facts {
     display: inline-block;
-    height: 220px;
+    height: 240px;
     margin-bottom: 0px;
   }
   .navbar-brand {
     line-height: 32px;
     padding: 4px 4px;
+    margin-top: -5px;
     text-align: center;
     width: 100px;
   }
   .navbar-toggle {
-    font-size: 20px;
+    font-size: 15px;
     position: absolute;
-    top: 0px;
-    right: 35px;
+    top: 4px;
+    right: 4px;
     padding: 5px;
   }
   .lead {
@@ -2098,6 +2115,7 @@ strong {
     font-size: 42px;
   }
   /* Layout */
+
   .page {
     padding-top: 30px;
   }
