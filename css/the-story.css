@@ -1832,9 +1832,6 @@ h5 {
   color: white;
 }
 /*TESTE */
-.team {
-  height: 1150px;
-}
 .container-a1 {
   margin-top: -30px;
 
@@ -2119,7 +2116,9 @@ strong {
   .navbar.home {
     background-color: rgba(0,0,0,0.6) !important;
 }
-
+.team {
+  height: 1150px;
+}
   /* Layout */
   body {
     overflow-x: hidden;
@@ -2128,6 +2127,8 @@ strong {
   .team li {
     width: 45%;
     padding: 0 5px;
+    margin-top: 0px;
+    margin-left: 0px;
   }
   #home,
   #sample-page {
