@@ -1849,7 +1849,7 @@ h5 {
     overflow: hidden;
     width: 14.28%;
   }
-  .caption-style-1 li:hover li:focus li:active .caption{
+  .caption-style-1 li:hover .caption, li:focus{
     opacity: 1;
   }
   .caption-style-1 img{
