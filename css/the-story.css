@@ -1832,6 +1832,9 @@ h5 {
   color: white;
 }
 /*TESTE */
+.team {
+  height: 1150px;
+}
 .container-a1 {
   margin-top: -30px;
 
@@ -1849,7 +1852,7 @@ h5 {
     overflow: hidden;
     width: 14.28%;
   }
-  .caption-style-1 li:hover .caption{
+  .caption-style-1 li:hover li:focus li:active .caption{
     opacity: 1;
   }
   .caption-style-1 img{
@@ -2116,6 +2119,7 @@ strong {
   .navbar.home {
     background-color: rgba(0,0,0,0.6) !important;
 }
+
   /* Layout */
   body {
     overflow-x: hidden;
