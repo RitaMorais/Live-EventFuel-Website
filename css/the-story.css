@@ -1627,7 +1627,6 @@ footer a {
 }
 /* NavBar */
 .navbar {
-    background-color: transparent;
     position:fixed;
     top:0;
     width:100%;
@@ -1820,6 +1819,80 @@ h5 {
   margin-bottom: 40px;
   color: #4586ae !important;
 }
+
+/* TEAM */
+.team {
+  color: white;
+  height: 700px;
+  width: 100%;
+  background-color: #0061d1;
+}
+.team h2 {
+  margin-bottom: 30px;
+  color: white;
+}
+/*TESTE */
+.container-a1 {
+  margin-top: -30px;
+
+}
+  .caption-style-1{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    
+  }
+  .caption-style-1 li{
+    float: left;
+    padding: 0px;
+    position: relative;
+    overflow: hidden;
+    width: 14.28%;
+  }
+  .caption-style-1 li:hover .caption{
+    opacity: 1;
+  }
+  .caption-style-1 img{
+    margin: 0px;
+    padding: 0px;
+    float: left;
+    z-index: 4;
+  }
+  .caption-style-1 .caption{
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition:all 0.45s ease-in-out;
+    -moz-transition:all 0.45s ease-in-out;
+    -o-transition:all 0.45s ease-in-out;
+    -ms-transition:all 0.45s ease-in-out;
+    transition:all 0.45s ease-in-out;
+  }
+  .caption-style-1 .blur{
+    background-color: rgba(0,0,0,0.65);
+    height: 300px;
+    width: 300px;
+    z-index: 5;
+    position: absolute;
+  }
+  .caption-text h2{
+    padding-left: 30px;
+    font-size: 2em;
+  }
+  .caption-text i {
+    font-size: 2em;
+    color: white;
+    padding-left: 30px;
+  }
+  .caption-text{
+    z-index: 10;
+    color: #fff;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    text-align: left;
+    top: 20px;
+  }
 
 .big-list {
   font-size: 25px;
@@ -2047,6 +2120,10 @@ strong {
   body {
     overflow-x: hidden;
     padding: 0;
+  }
+  .team li {
+    width: 45%;
+    padding: 0 5px;
   }
   #home,
   #sample-page {
