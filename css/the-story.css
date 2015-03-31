@@ -1755,10 +1755,10 @@ ul {
   background: #235c75;
 }
 /* Feature List */
-.features {
-  padding-bottom: 50px;
+.features, .features2 {
+  padding-bottom: 80px;
 }
-.features h3 {
+.features h3, .features2 h3 {
   font-size: 25px;
 }
 
@@ -1767,47 +1767,28 @@ ul {
 }
 .features li {
   max-width: 310px;
-  text-align: left;
   margin: 0 10px;
+  text-align: center;
 }
-.features li i {
+.features i {
   color: #3a9ac4;
-  font-size: 20px;
-  padding: 5px 10px 0px 0px;
-  float: left;
+  font-size: 50px;
 }
 .features li img {
   margin: auto;
 }
+.features2 i {
+  color: #3a9ac4;
+  padding: 5px 5px 5px 0px;
+  font-size: 30px;
+} 
 .howdoI {
   background-color: white;
 }
 .howdoI img {
   margin: auto;
 }
-/* Feature2 List */
 
-.features2 {
-  text-align: left;
-  margin-top: 20%;
-}
-.features2 h2 {
-  font-size: 25px;
-  padding-bottom: 30px;
-}
-
-.features2 li {
-  text-align: left;
-  margin: 0px 10px 0 30px;
-}
-
-.features2 li i {
-  min-height: 100px;
-  color: #0061D0;
-  font-size: 40px;
-  padding-top: 30px;
-  padding-right: 10px;
-}
 .color-6 {
   color: #0061D0 !important;
   font-weight: 700 !important;
@@ -1823,19 +1804,15 @@ h5 {
 /* TEAM */
 .team {
   color: white;
-  height: 700px;
   width: 100%;
+  height: 1100px;
   background-color: #0061d1;
 }
 .team h2 {
   margin-bottom: 30px;
   color: white;
 }
-/*TESTE */
-.container-a1 {
-  margin-top: -30px;
-
-}
+/*TEAM */
   .caption-style-1{
     list-style-type: none;
     margin: 0px;
@@ -1847,7 +1824,7 @@ h5 {
     padding: 0px;
     position: relative;
     overflow: hidden;
-    width: 14.28%;
+    min-width: 200px;
   }
   .caption-style-1 li:hover .caption, li:focus{
     opacity: 1;
@@ -1876,13 +1853,14 @@ h5 {
     position: absolute;
   }
   .caption-text h2{
-    padding-left: 30px;
+
     font-size: 2em;
   }
   .caption-text i {
     font-size: 2em;
     color: white;
-    padding-left: 30px;
+    padding-right: 5px;
+
   }
   .caption-text{
     z-index: 10;
@@ -1892,6 +1870,7 @@ h5 {
     height: 300px;
     text-align: left;
     top: 20px;
+    padding-left: 30px;
   }
 
 .big-list {
@@ -2092,7 +2071,7 @@ h5 {
   font-size: 62px;
 }
 .center {
-  text-align: center;
+  text-align: center !important;
 }
 .lead {
   font-size: 22px;
