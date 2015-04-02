@@ -76,26 +76,12 @@ $(document).ready(function() {
         }
     });
 
-// //change menu    
-
-// $(document).on("scroll",function(){
-//     if($(document).scrollTop()>300) {
-//         $(".navbar").removeClass("large").addClass("small");
-//         // $('#logo').attr('src', 'img/brand.png')
-//     } else{
-//         $(".navbar").removeClass("small").addClass("large");
-//         // $('#logo').attr('src', 'img/logolarge.png')
-//     }
-// });
-
 //change menu    
-
 $(document).on("scroll",function(){
-    if($(document).scrollTop()>300) {
-        $(".navbar").removeClass("home").addClass("dark");
-    } else{
+    if($(document).scrollTop()<300) {
         $(".navbar").removeClass("dark").addClass("home");
-
+    } else{
+        $(".navbar").removeClass("home").addClass("dark");
     }
 });
 

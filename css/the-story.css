@@ -1630,7 +1630,11 @@ footer a {
     position:fixed;
     top:0;
     width:100%;
-    padding: 20px 0;
+    padding: 0;
+
+}
+#logo {
+  padding-top: 5px;
 }
 
 .back_img {
@@ -1669,27 +1673,35 @@ footer a {
 }
 /* Menu colors */
 .active .brand-1 {
+  color: white !important;
   background-color: #3a9ac4 !important;
 }
 .brand-1:hover {
+  color: white !important;
   background-color: #0061d1 !important;
 }
 .active .brand-2 {
+  color: white !important;
   background-color: #4d7ed8 !important;
 }
 .brand-2:hover {
+  color: white !important;
   background-color: #4d7ed8 !important;
 }
 .active .brand-3 {
+  color: white !important;
   background-color: #4d7ed8 !important;
 }
 .brand-3:hover {
+  color: white !important;
   background-color: #4d7ed8 !important;
 }
 .active .brand-4 {
+  color: white !important;
   background-color: #ffffff !important;
 }
 .brand-4:hover {
+  color: white !important;
   background-color: #ffffff !important;
 }
 /* User Interface */
@@ -1761,7 +1773,9 @@ ul {
 .features h3, .features2 h3 {
   font-size: 25px;
 }
-
+.title {
+    padding-top: 100px;
+  }
 .features p, .features2 p {
   font-size: 15px;
 }
@@ -1964,14 +1978,18 @@ h5 {
   margin: 0 auto;
   display: block;
 }
-  .btn-home {
-    color: white;
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid grey;
+.btn-home {
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid grey;
+  height: 50px;
+}
+.btn-home:hover, .btn-home:active{
+  color: #4d7ed8;
+  background-color: white;
+}
 
-    height: 50px;
 
-  }
 /* Social Buttons */
 .social i {
   -webkit-transition: color 0.6s;
@@ -2677,25 +2695,7 @@ img.mfp-img {
     margin-left: 5px;
   }
 }
-/*@media screen and (min-width: 1200px) {
-.navbar img{ height: 50px; margin-top: 2px; margin-left: -10px; }
-*/
-/* Sizes for the bigger menu */
-/*.navbar.large { height: 120px !important; }
-.navbar.large li{ margin-top: 10px; }*/
-/* Sizes for the smaller menu */
-/*.navbar.small { height: 50px !important; background-color:rgba(0,0,0,0.6);}
-.navbar.small img {width: 35%; height: 35%; margin-top: -15px;}
-.navbar.small li{ margin-top: -15px; }
 
-header,.navbar, a, li {
-  transition: all 1s;
-  -moz-transition: all 1s;
-  -webkit-transition: all 1s; 
-  -o-transition: all 1s; 
-}
-}
-*/
 
 .navbar.dark { background-color:rgba(0,0,0,0.6);}
 .navbar.home { background-color: transparent;}
