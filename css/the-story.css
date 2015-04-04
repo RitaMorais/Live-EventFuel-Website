@@ -1547,8 +1547,8 @@ a .icon-flip-vertical:before {
 }
 
 .inner-page {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -1558,8 +1558,7 @@ a .icon-flip-vertical:before {
   max-width: 1100px;
   margin: 0 auto;
 }
-.newsletter,
-footer {
+.newsletter {
   padding: 0!important;
   margin: 0!important;
 }
@@ -1601,13 +1600,23 @@ footer a {
 }
 .team .social i {
   color: #333;
+  vertical-align: sub;
+  line-height: 40px;
 }
 /* Sign up text */
 .sign-up h4 {
   font-size: 26px;
 }
-/* Footer */.copyright {
-  line-height: 50px;
+/* Footer */
+.social {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 40px;
+}
+.copyright {
+  line-height: 40px;
+  vertical-align: super;
+  display: inline-block;
 }
 /* Newsletter */
 .newsletter h4 {
@@ -1633,12 +1642,15 @@ footer a {
     padding: 0;
 
 }
-#logo {
-  padding-top: 5px;
+#logo-img {
+  display: inline-block;
+}
+#logo-text {
+  display: inline-block;
 }
 
 .back_img {
-  background: url(../img/background.jpg) no-repeat center center fixed; 
+  background: url(../img/background.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -1647,8 +1659,7 @@ footer a {
 }
 
 .features_img {
-  background: #ebeef6; 
-
+  background: #ebeef6;
 }
 
 /* Navigation */
@@ -1713,14 +1724,14 @@ a {
 a:hover {
   text-decoration: none;
 }
-#contact-form textarea,
-#contact-form input {
+.ef-form textarea,
+.ef-form input {
   width: 100%;
   padding: 5px;
   margin: 5px 0;
   text-indent: 10px;
 }
-#contact-form .btn {
+.ef-form .btn {
   margin-top: 25px;
 }
 hr {
@@ -1731,9 +1742,12 @@ hr {
 ul {
   list-style: none;
 }
+.list-inline {
+  padding-left: 40px;
+}
 .list-inline li {
   display: inline-block;
-  padding-right: 8px;
+  padding-bottom: 25px;
 }
 .facts {
   color: white;
@@ -1768,7 +1782,7 @@ ul {
 }
 /* Feature List */
 .features, .features2 {
-  padding-bottom: 80px;
+  padding-bottom: 7px;
 }
 .features h3, .features2 h3 {
   font-size: 25px;
@@ -1782,7 +1796,6 @@ ul {
 .features li {
   max-width: 310px;
   margin: 0 10px;
-  text-align: center;
 }
 .features i {
   color: #3a9ac4;
@@ -1795,7 +1808,7 @@ ul {
   color: #3a9ac4;
   padding: 5px 5px 5px 0px;
   font-size: 30px;
-} 
+}
 .howdoI {
   background-color: white;
 }
@@ -1831,7 +1844,7 @@ h5 {
     list-style-type: none;
     margin: 0px;
     padding: 0px;
-    
+
   }
   .caption-style-1 li{
     float: left;
@@ -1995,8 +2008,6 @@ h5 {
   -webkit-transition: color 0.6s;
   transition: color 0.6s;
   font-size: 38px;
-  padding: 2px;
-  margin: 2px;
   color: #F1F1F1;
 }
 .social i:hover {
@@ -2074,13 +2085,17 @@ h5 {
 }
 /* Typography */
 /* -------------------------------------------------- */
-.navbar-brand {
-  margin: 0;
-  padding: 2px;
-  font-size: 25px;
-  float: left;
-  letter-spacing: 1px;
-  font-weight: 600;
+.navbar-default .navbar-nav>li>a {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #FFFFFF;
+  height: 49px;
+  line-height: 37px;
+}
+.navbar-header {
+  height:49px;
+}
+.nav-collapse {
+  border: none;
 }
 .page-headline {
   font-size: 50px;
@@ -2088,7 +2103,13 @@ h5 {
 .large {
   font-size: 62px;
 }
-.center {
+.text-right {
+  text-align: right !important;
+}
+.text-left {
+  text-align: left !important;
+}
+.text-center, .center {
   text-align: center !important;
 }
 .lead {
@@ -2109,14 +2130,14 @@ strong {
   .navbar {
     background-color: rgba(0,0,0,0.6);
     max-height: 50px;
-}
+  }
   .navbar.home {
     background-color: rgba(0,0,0,0.6) !important;
     padding-top: 0px !important;
-}
-.team {
-  height: 1150px;
-}
+  }
+  .team {
+    height: 1150px;
+  }
   /* Layout */
   body {
     overflow-x: hidden;
@@ -2162,8 +2183,7 @@ strong {
     display: block;
   }
   .sign-up,
-  .newsletter,
-  footer {
+  .newsletter {
     padding: 0 40px!important;
   }
   .big-list li {
@@ -2179,9 +2199,6 @@ strong {
   #home {
     height: 100% !important;
   }
-  .features {
-    padding-left: 20px;
-  }
   .lazy-container {
     padding-top: 40px;
     margin-bottom: 30px;
@@ -2190,13 +2207,6 @@ strong {
     display: inline-block;
     height: 240px;
     margin-bottom: 0px;
-  }
-  .navbar-brand {
-    line-height: 32px;
-    padding: 4px 4px;
-    margin-top: -5px;
-    text-align: center;
-    width: 100px;
   }
   .navbar-toggle {
     font-size: 15px;
@@ -2704,8 +2714,8 @@ img.mfp-img {
 header,.navbar, a, li {
   transition: all 1s;
   -moz-transition: all 1s;
-  -webkit-transition: all 1s; 
-  -o-transition: all 1s; 
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
 }
 }
 

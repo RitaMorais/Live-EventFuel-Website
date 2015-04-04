@@ -6,11 +6,11 @@ $(document).ready(function() {
         color: '#000'
     });
 
-    // Lazy loading. 
+    // Lazy loading.
     $("img.lazy").lazyload({
         // The image starts loading 200 px before it is in viewport
         threshold: 200,
-        // Remove the line if you don`t need fade effect. 
+        // Remove the line if you don`t need fade effect.
         effect: "fadeIn",
         // Change this for fade in speed
         effectspeed: 600,
@@ -76,18 +76,23 @@ $(document).ready(function() {
         }
     });
 
-//change menu    
-$(document).on("scroll",function(){
-    if($(document).scrollTop()<300) {
-        $(".navbar").removeClass("dark").addClass("home");
-    } else{
-        $(".navbar").removeClass("home").addClass("dark");
+    var setTopMenuStyle = function() {
+        if($(document).scrollTop() < 300) {
+            $(".navbar").removeClass("dark").addClass("home");
+        } else{
+            $(".navbar").removeClass("home").addClass("dark");
+        }
     }
-});
 
+    // set scroll on page load
+    setTopMenuStyle();
+
+    //change menu on scroll
+    $(document).on("scroll",function(){
+        setTopMenuStyle();
+    });
 
     // .scroll class for link scrolling.
-
     $('.scroll[href^="#"]').bind('click.smoothscroll', function(e) {
         e.preventDefault();
         var target = this.hash;

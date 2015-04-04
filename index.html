@@ -5,7 +5,7 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
   <meta charset="utf-8">
   <meta name="description" content="Flexible event apps with instant content management. Containing Speaker biographies, Agenda, FAQ, Survey, Notes and Sketches, Attendee Profiles">
-  <meta name="author" content="Tasboa Sociedade Unipessoal 2013">
+  <meta name="author" content="Tasboa Lda">
 
   <!-- Load bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -24,42 +24,42 @@
       <script src="/js/html5shiv.js"></script>
       <script src="/js/respond.min.js"></script>
       <![endif]-->
-<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBTbR3YcJI7ptSMWCQwav-rw-KzaW0SMic&sensor=false&extension=.js'></script> 
- 
-<script> 
-    google.maps.event.addDomListener(window, 'load', init);
-    var map;
-    function init() {
-        var mapOptions = {
-            center: new google.maps.LatLng(10.410591,71.912841),
-            zoom: 2,
-            zoomControl: true,
-            zoomControlOptions: {
-                style: google.maps.ZoomControlStyle.SMALL,
-            },
-            disableDoubleClickZoom: true,
-            mapTypeControl: true,
-            mapTypeControlOptions: {
-                style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-            },
-            scaleControl: true,
-            scrollwheel: true,
-            panControl: false,
-            streetViewControl: false,
-            draggable : true,
-            overviewMapControl: true,
-            overviewMapControlOptions: {
-                opened: false,
-            },
-            mapTypeId: google.maps.MapTypeId.ROADMAP,
-            styles: [{"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"color":"#f7f1df"}]},{"featureType":"landscape.natural","elementType":"geometry","stylers":[{"color":"#d0e3b4"}]},{"featureType":"landscape.natural.terrain","elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.medical","elementType":"geometry","stylers":[{"color":"#fbd3da"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#bde6ab"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffe15f"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#efd151"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"black"}]},{"featureType":"transit.station.airport","elementType":"geometry.fill","stylers":[{"color":"#cfb2db"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#a2daf2"}]}],
-        }
-        var mapElement = document.getElementById('mapa');
-        var map = new google.maps.Map(mapElement, mapOptions);
-        var locations = [
-['Lx Factory', 'Rua Rodrigues de Faria 103, 1300 Lisboa, Portugal', 'undefined', 'undefined', 'undefined', 38.7035223, -9.178842700000018, 'https://mapbuildr.com/assets/img/markers/solid-pin-black.png'],['Lausanne Office', 'undefined', 'undefined', 'undefined', 'undefined', 46.5199617, 6.6335970999999745, 'https://mapbuildr.com/assets/img/markers/solid-pin-black.png'],['Melbourne Office', 'undefined', 'undefined', 'undefined', 'undefined', -37.735387, 145.01624100000004, 'https://mapbuildr.com/assets/img/markers/solid-pin-black.png']
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTbR3YcJI7ptSMWCQwav-rw-KzaW0SMic&sensor=false&extension=.js"></script>
+
+<script>
+  google.maps.event.addDomListener(window, 'load', init);
+  var map;
+  function init() {
+    var mapOptions = {
+      center: new google.maps.LatLng(10.410591,71.912841),
+      zoom: 1,
+      zoomControl: true,
+      zoomControlOptions: {
+          style: google.maps.ZoomControlStyle.SMALL,
+      },
+      disableDoubleClickZoom: true,
+      mapTypeControl: true,
+      mapTypeControlOptions: {
+          style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+      },
+      scaleControl: true,
+      scrollwheel: true,
+      panControl: false,
+      streetViewControl: false,
+      draggable : true,
+      overviewMapControl: true,
+      overviewMapControlOptions: {
+          opened: false,
+      },
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      styles: [{"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"color":"#f7f1df"}]},{"featureType":"landscape.natural","elementType":"geometry","stylers":[{"color":"#d0e3b4"}]},{"featureType":"landscape.natural.terrain","elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.medical","elementType":"geometry","stylers":[{"color":"#fbd3da"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#bde6ab"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffe15f"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#efd151"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"black"}]},{"featureType":"transit.station.airport","elementType":"geometry.fill","stylers":[{"color":"#cfb2db"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#a2daf2"}]}],
+    }
+    var mapElement = document.getElementById('mapa');
+    var map = new google.maps.Map(mapElement, mapOptions);
+    var locations = [
+      ['Lx Factory', 'Rua Rodrigues de Faria 103, 1300 Lisboa, Portugal', 'undefined', 'undefined', 'undefined', 38.7035223, -9.178842700000018, 'https://mapbuildr.com/assets/img/markers/solid-pin-black.png'],['Lausanne Office', 'undefined', 'undefined', 'undefined', 'undefined', 46.5199617, 6.6335970999999745, 'https://mapbuildr.com/assets/img/markers/solid-pin-black.png'],['Melbourne Office', 'undefined', 'undefined', 'undefined', 'undefined', -37.735387, 145.01624100000004, 'https://mapbuildr.com/assets/img/markers/solid-pin-black.png']
         ];
-        for (i = 0; i < locations.length; i++) {
+    for (i = 0; i < locations.length; i++) {
       if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
       if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
       if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
@@ -75,40 +75,40 @@
                 email: email,
                 web: web
             });
-link = '';            bindInfoWindow(marker, map, locations[i][0], description, telephone, email, web, link);
-     }
- function bindInfoWindow(marker, map, title, desc, telephone, email, web, link) {
+            link = '';
+            bindInfoWindow(marker, map, locations[i][0], description, telephone, email, web, link);
+    }
+    function bindInfoWindow(marker, map, title, desc, telephone, email, web, link) {
       var infoWindowVisible = (function () {
-              var currentlyVisible = false;
-              return function (visible) {
-                  if (visible !== undefined) {
-                      currentlyVisible = visible;
-                  }
-                  return currentlyVisible;
-               };
-           }());
-           iw = new google.maps.InfoWindow();
-           google.maps.event.addListener(marker, 'click', function() {
-               if (infoWindowVisible()) {
-                   iw.close();
-                   infoWindowVisible(false);
-               } else {
-                   var html= "<div style='color:#000;background-color:#fff;padding:5px;width:150px;'><h4>"+title+"</h4></div>";
-                   iw = new google.maps.InfoWindow({content:html});
-                   iw.open(map,marker);
-                   infoWindowVisible(true);
-               }
-        });
-        google.maps.event.addListener(iw, 'closeclick', function () {
-            infoWindowVisible(false);
-        });
- }
-}
+        var currentlyVisible = false;
+        return function (visible) {
+          if (visible !== undefined) {
+            currentlyVisible = visible;
+          }
+          return currentlyVisible;
+        };
+      }());
+      iw = new google.maps.InfoWindow();
+      google.maps.event.addListener(marker, 'click', function() {
+        if (infoWindowVisible()) {
+          iw.close();
+          infoWindowVisible(false);
+        } else {
+          var html= "<div style='color:#000;background-color:#fff;padding:5px;width:150px;'><h4>"+title+"</h4></div>";
+          iw = new google.maps.InfoWindow({content:html});
+          iw.open(map,marker);
+          infoWindowVisible(true);
+        }
+      });
+      google.maps.event.addListener(iw, 'closeclick', function () {
+        infoWindowVisible(false);
+      });
+    }
+  }
 </script>
 <style>
     #mapa {
         height:400px;
-        width:550px;
     }
     .gm-style-iw * {
         display: block;
@@ -122,28 +122,27 @@ link = '';            bindInfoWindow(marker, map, locations[i][0], description, 
         color: #4272db;
     }
 </style>
-
-
 </head>
 
 <!-- activate scrollspy -->
 
 <body id="top" data-spy="scroll" data-target=".navbar" data-offset="50">
-  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <nav class="navbar navbar-default navbar-fixed-top home" role="navigation">
     <div class="navbar-container">
       <div class="navbar-header">
         <a class="navbar-brand" href="#home">
-          <img src="img/brand.png" alt="EventFuel" title="EventFuel" id="logo">
+          <img src="img/logo.png" alt="EventFuel" title="EventFuel" id="logo-img">
+          <img src="img/brand.png" alt="EventFuel" title="EventFuel" id="logo-text">
         </a>
-        <button class='navbar-toggle' data-target='.navbar-ex1-collapse' data-toggle='collapse' type='button'>
+        <button class="navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button">
           <span class="sr-only">Toggle navigation</span>
-          <i class="icon-uniE1E0"></i>
+          <i class="icon-uniE171"></i>
         </a>
       </div>
       <div id="nav-collapse" class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a title="Sign Up Now" href="#" class=" scroll brand-1">Sign Up</a></li>
           <li><a title="Check out our awesome services" href="#features" class=" scroll brand-2">Features</a></li>
+          <li><a title="Sign Up Now" href="#sign_up" class=" scroll brand-2">Sign Up</a></li>
           <li><a title="Get in touch!" href="#contact" class="scroll brand-2">Contact</a></li>
         </ul>
       </div>
@@ -153,71 +152,73 @@ link = '';            bindInfoWindow(marker, map, locations[i][0], description, 
   <!-- Home Page -->
   <div id="home" class="page back_img">
     <div class="row inner-page2">
-       <div class="col-md-8 col-md-offset-2 lazy-container">
+      <div class="col-md-8 col-md-offset-2 lazy-container">
         <img class="lazy" alt="Looks great on every device" src="img/pixel.png" data-original="img/home_new.png" />
       </div>
     </div>
-        <div class="col-md-8 col-md-offset-2 center">
+    <div class="col-md-8 col-md-offset-2 center">
       <h3>Change the way you manage your events</h3>
-      </div>
+    </div>
     <div class="row inner-page2">
       <div class="col-md-6 col-md-offset-3">
-      <p class="center">Eventfuel is a powerful agenda iOS app and event management tool</p>  
-      <a href="#features" title="Check out more freatures!" class="scroll btn btn-centered btn-home">Sign up now</a>
+        <p class="center">Eventfuel is a powerful agenda iOS app and event management tool</p>
+        <a href="#features" title="Check out more freatures!" class="scroll btn btn-centered btn-home">Sign up now</a>
       </div>
     </div>
   </div> <!-- /#home -->
 
   <!-- Facts -->
-    <ul class="facts list-inline">
-      <div class="col-md-3">
-        <li><h4><b>40</b> COUNTRIES</h4></li>
-      </div>
-      <div class="col-md-3">  
-        <li><h4><b>5</b> CONTINENTS</h4></li>
-      </div>
-      <div class="col-md-3">  
-        <li><h4><b>10</b> LANGUAGES</h4></li>
-      </div>
-      <div class="col-md-3">  
-        <li><h4>OVER <b>30 000</b> ATENDEES</h4></li>
-        </div>
-      </ul><!-- /.facts -->
+  <ul class="facts list-inline">
+    <div class="col-md-3">
+      <li><h4><b>40</b> COUNTRIES</h4></li>
+    </div>
+    <div class="col-md-3">
+      <li><h4><b>5</b> CONTINENTS</h4></li>
+    </div>
+    <div class="col-md-3">
+      <li><h4><b>10</b> LANGUAGES</h4></li>
+    </div>
+    <div class="col-md-3">
+      <li><h4><b>30 000+</b> ATTENDEES</h4></li>
+    </div>
+  </ul><!-- /.facts -->
 
   <!-- Feature page-->
   <div id="features" class="page color-4">
-    <div class="inner-page">
-      <h2 class="page-headline center">Why choose EventFuel?</h2>
+    <div class="inner-page row">
+      <div class="col-md-12">
+        <h2 class="page-headline center">Why choose EventFuel?</h2>
+      </div>
     </div>
 
-    <div class="inner-page row">
+    <div class="inner-page">
       <ul class="features list-inline">
         <li>
-          <i class="icon-uniE0B9"></i>
+          <p class="center"><i class="icon-uniE0B9"></i></p>
           <h3 class="center">Stop using paper</h3>
           <h5 class="center">Less hassle, time and money</h5>
-          <p>Event programmes are pricey, time consuming and get easily outdated. 
+          <p class="center">Event programmes are pricey, time consuming and get easily outdated.
             <br>Have an <b>interactive event agenda</b> with all the information you need</p>
         </li>
         <li>
-          <i class="icon-uniE1EB"></i>
+          <p class="center"><i class="icon-uniE1EB"></i></p>
           <h3 class="center"> Last minute changes</h3>
           <h5 class="center">With just one click</h5>
-          <p>Never have your information outdated! <br>Your attendees will always have access to the most <b>recent, updated and accurate</b> details of your event</p>
+          <p class="center">Never have your information outdated! <br>Your attendees will always have access to the most <b>recent, updated and accurate</b> details of your event</p>
         </li>
         <li>
-          <i class="icon-uniE016"></i>
-          <h3 class="center"> Get results fast</h3>
-          <h5 class="center">Know what your atendees want</h5>
-          <p>Never have to go through stacks of paper surveys to get your results! 
+          <p class="center"><i class="icon-uniE016"></i></p>
+          <h3 class="center">Get results fast</h3>
+          <h5 class="center">Know what your attendees want</h5>
+          <p class="center">Never have to go through stacks of paper surveys to get your results!
             <br>Online, <b>interactive and customisable</b> surveys will do the job</p>
         </li>
       </ul>
     </div>
-<hr>
+
     <div class="row inner-page">
-        <div class="features2 col-md-3 col-md-push-1">
-        <h2 class="page-headline">Instantly Customisable</h2>
+      <div class="features2 col-md-3 col-md-push-1">
+        <h3 class="page-headline">Instantly Customisable</h3>
         <p class="lead">Our team will help you create your own app to meet your needs and the demands of your event.</p>
         <ul class="list-wide ok">
           <li><i class="icon-uniE177"></i> Event Agenda</li>
@@ -231,193 +232,78 @@ link = '';            bindInfoWindow(marker, map, locations[i][0], description, 
       <div class="col-md-8 col-md-push-1 lazy-container">
         <img class="figurette img-responsive lazy" src="img/pixel.png" data-original="img/two-phones2.png" alt="Customise your agenda" />
       </div>
-
-
     </div>
-
-
-
 
     <div class="features features_img">
       <div class="row inner-page">
-        <div class="col-md-4">
+        <div class="col-md-6">
           <h2 class="title page-headline">With Eventfuel <br>you will be able to:</h2>
         </div>
-      <div class="col-md-6 col-md-push-2">
-        <div class="btn-container figurette">
-          <img src="img/video.png" alt="Play video" />
-          <a class="lightbox iframe btn-play" target="_blank" href="http://www.youtube.com/watch?v=TkjewTiebhk"><i class="icon-uniE1BC"></i></a>
+        <div class="col-md-6">
+          <div class="btn-container figurette">
+            <img src="img/video.png" alt="Play video" />
+            <a class="lightbox iframe btn-play" target="_blank" href="http://www.youtube.com/watch?v=TkjewTiebhk"><i class="icon-uniE1BC"></i></a>
+          </div>
         </div>
-      </div>
       </div>
       <div class="row inner-page">
         <div class="col-md-3">
           <h3 class="color-6">Create multiple events</h3>
-            <p>You can create templates, duplicate events, and always access your previous data, the big issue is what does the fox say?</p>
-        </div>    
+          <p>You can create templates, duplicate events, and always access your previous data, the big issue is what does the fox say?</p>
+        </div>
         <div class="col-md-3">
-            <h3 class="color-6">Create detailed agendas</h3>
-            <p>Create easily updatable agendas. Create easily updatable agendas, never worry about last minute changes again.</p>
-        </div>    
+          <h3 class="color-6">Create detailed agendas</h3>
+          <p>Create easily updatable agendas. Create easily updatable agendas, never worry about last minute changes again.</p>
+        </div>
         <div class="col-md-3">
           <h3 class="color-6">Customise it!</h3>
-            <p>Customise not only colors and layout, customise your event flow. Organise your atendees into groups and customise what they see</p>
-        </div>    
+          <p>Customise not only colours and layout, customise your event flow. Assign your attendees tracks and customise what they see.</p>
+        </div>
         <div class="col-md-3">
-          <h3 class="color-6">Get feedback from your atendees</h3>
-            <p>Never go through stacks of paper surveys again. Get your results automatically with interactive customisable surveys</p>
-        </div>    
+          <h3 class="color-6">Get feedback from your attendees</h3>
+          <p>Never go through stacks of paper surveys again. Get your results automatically with instantly customisable surveys.</p>
+        </div>
       </div>
-        <div class="row inner-page howdoI">
-          <div class="col-md-4 col-md-offset-4">
-          <img src="img/iconsmall.png" alt="EventFuel" title="EventFuel" id="logo">  
-          <h3>How do I get my app?</h3>
-          <p>Once we are contacted, our team will work with you to set up a fully customised app full of your event information ready for your attendees to download.</p>
-          <hr>
-          <a href="#features" title="Check out more freatures!" class=" scroll btn btn-centered color-1">Sign up now</a>
-          </div>
-      </div>  
-      <div class="row inner-page">
-       </div> 
+      <div id="sign_up" class="row inner-page howdoI">
+        <div class="col-md-4 col-md-offset-4">
+          <img src="img/iconsmall.png" alt="EventFuel" title="EventFuel" id="logo">
+          <h3 class="center">How do I get my app?</h3>
+          <p>Once you sign up, our system will start creating a sample event for you. Once it is set up an email will be sent to you with a sample invitation</p>
+          <form class="ef-form">
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+          </form>
+          <a href="#sign_up" title="Get started now!" class=" scroll btn btn-centered color-1">Sign up</a>
+        </div>
+      </div>
+      <div class="row inner-page"></div>
     </div>
-<!-- /#features -->
-<!-- <div class="team">
+  </div>
+
+  <!-- Contact page -->
+  <div id="contact" class="page color-2">
     <div class="row inner-page">
       <div class="col-md-6">
-          <h2 class="page-headline large">Meet the team</h2>
-        </div>
-         <div class="col-md-4">
-          <p><br>We work with the most blablabla awesome team to bring to you the best product and customer support you need, your events are our priority</p>
-          <br>
-          <a href="#features" title="Check out more freatures!" class=" scroll btn btn-centered color-2">Learn More</a>
-        </div>
-    </div>
-    <div class="inner-page">
-    <div class="container-a1">
-      <ul class="caption-style-1">
-        <li>
-          <img src="img/niko.png" alt="">
-          <div class="caption">
-            <div class="blur"></div>
-            <div class="caption-text">
-              <h2>Niko <br>Roberts</h2>
-              <a href="https://facebook.com/geteventfuel"><i class="icon-uniE1FF"></i></a>
-               <a href="https://github.com/"><i class="icon-uniE203"></i></a>
-               <a href="https://github.com/"><i class="icon-uniE207"></i></a>
-            </div>
-          </div>
-          </li>
-          <li>
-          <img src="img/jan.png" alt="">
-          <div class="caption">
-            <div class="blur"></div>
-            <div class="caption-text">
-              <h2>Jan <br>Jokela</h2>
-              <a href="https://facebook.com/geteventfuel"><i class="icon-uniE1FF"></i></a>
-               <a href="https://github.com/"><i class="icon-uniE203"></i></a>
-               <a href="https://github.com/"><i class="icon-uniE207"></i></a>
-            </div>
-          </div>
-          </li>
-         <li>
-          <img src="img/vasco.png" alt="">
-          <div class="caption">
-            <div class="blur"></div>
-            <div class="caption-text">
-              <h2>Vasco <br>d'Orey</h2>
-              <a href="https://facebook.com/geteventfuel"><i class="icon-uniE1FF"></i></a>
-               <a href="https://github.com/"><i class="icon-uniE203"></i></a>
-               <a href="https://github.com/"><i class="icon-uniE207"></i></a>
-            </div>
-          </div>
-          </li>
-         <li>
-          <img src="img/guy.png" alt="">
-          <div class="caption">
-            <div class="blur"></div>
-            <div class="caption-text">
-              <h2>Guy <br>Silva</h2>
-              <a href="https://facebook.com/geteventfuel"><i class="icon-uniE1FF"></i></a>
-               <a href="https://github.com/"><i class="icon-uniE203"></i></a>
-               <a href="https://github.com/"><i class="icon-uniE207"></i></a>
-            </div>
-          </div>
-          </li>
-         <li>
-          <img src="img/bruno.png" alt="">
-          <div class="caption">
-            <div class="blur"></div>
-            <div class="caption-text">
-              <h2>Bruno <br>Coelho</h2>
-              <a href="https://facebook.com/geteventfuel"><i class="icon-uniE1FF"></i></a>
-               <a href="https://github.com/"><i class="icon-uniE203"></i></a>
-               <a href="https://github.com/"><i class="icon-uniE207"></i></a>
-            </div>
-          </div>
-          </li>
-         <li>
-          <img src="img/helder.png" alt="">
-          <div class="caption">
-            <div class="blur"></div>
-            <div class="caption-text">
-              <h2>Hélder <br>Tavares</h2>
-              <a href="https://facebook.com/geteventfuel"><i class="icon-uniE1FF"></i></a>
-               <a href="https://github.com/"><i class="icon-uniE203"></i></a>
-               <a href="https://github.com/"><i class="icon-uniE207"></i></a>
-            </div>
-          </div>
-          </li>
-          <li>
-          <img src="img/rita.png" alt="">
-          <div class="caption">
-            <div class="blur"></div>
-            <div class="caption-text">
-              <h2>Rita <br>Morais</h2>
-              <a href="https://facebook.com/geteventfuel"><i class="icon-uniE1FF"></i></a>
-              <a href="https://github.com/"><i class="icon-uniE203"></i></a>
-              <a href="https://github.com/"><i class="icon-uniE207"></i></a>
-              
-            </div>
-          </div>
-          </li>
-          </ul>
-      </div> 
-    </div>
-   </div> -->  
-   <!-- /#team -->
-
-<!-- VIDEO -->
-<!-- <div class="col-md-6">
-        <div class="btn-container figurette">
-          <img src="img/video.png" alt="Play video" />
-          <a class="lightbox iframe btn-play" target="_blank" href="http://www.youtube.com/watch?v=TkjewTiebhk"><i class="icon-play"></i></a>
-        </div> -->
-  
-
-  <!--
-Contact page -->
-
-  <div id="contact" class="page color-2">
-    <div class="inner-page">
-      <h2 class="page-headline" style="color:white">Want to know more? Contact us</h2>
+        <h2 class="page-headline" style="color:white">Want to know more? Contact us</h2>
+      </div>
     </div>
     <div class="row inner-page contact">
       <div class="col-md-6">
         <h3> </h3>
-        <form id="contact-form" method="GET" enctype="text/plain" action="mailto:contact@geteventfuel.com">
-          <input type="text" class="form-control" placeholder="Your name">
+        <form class="ef-form" method="GET" enctype="text/plain" action="/contact_email">
+          <input type="name" class="form-control" placeholder="Your name">
+          <input type="email" class="form-control" placeholder="Your email" name="subject">
           <input type="text" class="form-control" placeholder="Your subject" name="subject">
           <textarea rows="6" class="form-control" placeholder="Your message" name="body"></textarea>
           <input type="submit" class="btn btn-primary color-1 btn-centered" value="Contact us">
         </form>
       </div>
       <div class="col-md-6">
-          <div id='mapa'></div>
-          <p> Rua Rodrigues de Faria 103, 1300 Lisboa, Portugal </p>
+        <div id="mapa"></div>
+        <p>Now in Portugal, Switzerland and Australia!</p>
       </div>
     </div>
-    <div class="inner-page">
-    </div>  
+    <div class="inner-page"></div>
   </div> <!-- /#contact -->
 
 
@@ -425,28 +311,27 @@ Contact page -->
   <footer class="page color-5">
     <div class="inner-page row">
       <div class="col-md-6 social">
-        <a href="https://twitter.com/geteventfuel"><i class="icon-uniE213"></i></a>
-        <a href="https://facebook.com/geteventfuel"><i class="icon-uniE1FF"></i></a>
+        <a href="https://twitter.com/eventfuel_io"><i class="icon-uniE213"></i></a>
+        <a href="https://facebook.com/eventfuel"><i class="icon-uniE1FF"></i></a>
       </div>
       <div class="col-md-6 text-right copyright">
-        &copy; 2015 <a href="http://tasboa.com" title="A product of Tasboa">tasboa.com</a> | all rights reserved
+        &copy; 2015 Tasboa Lda
       </div>
     </div>
   </footer>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script>
-  if (typeof jQuery == 'undefined') {
+  if (typeof jQuery == "undefined") {
     document.write(unescape("%3Cscript src='js/jquery-2.1.3.min.js' type='text/javascript'%3E%3C/script%3E"));
   }
   </script>
 
   <!-- Minimize in production. -->
-
   <script src="js/lazyload.js"></script>
   <script src="js/spin.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/lightbox.min.js"></script>
-
 
   <!-- Main js fail. -->
   <script src="js/main.js"></script>
@@ -457,8 +342,8 @@ Contact page -->
   // History, and back button
   $(function() {
     jQuery.history.listen()
-    $('.nav .scroll').click(function() {
-      $.history.push('index.html' + $(this).attr('href'));
+    $(".nav .scroll").click(function() {
+      $.history.push("index.html" + $(this).attr("href"));
     });
   });
   </script>
