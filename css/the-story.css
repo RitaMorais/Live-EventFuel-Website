@@ -1548,7 +1548,7 @@ a .icon-flip-vertical:before {
 
 .inner-page {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 150px;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -1594,20 +1594,23 @@ footer a {
 #home p {
   margin-top: -20px !important;
 }
-/* About page */
-.team img {
-  margin-right: 30px;
-}
-.team .social i {
-  color: #333;
-  vertical-align: sub;
-  line-height: 40px;
-}
 /* Sign up text */
 .sign-up h4 {
   font-size: 26px;
 }
+
+/* Pricing */
+#pricing {
+  padding-top: 50px;
+}
+
 /* Footer */
+footer .inner-page, #contact .inner-page {
+  padding-bottom: 10px;
+}
+#contact h2 {
+  margin-top: 0px;
+}
 .social {
   display: inline-block;
   vertical-align: middle;
@@ -1806,11 +1809,25 @@ ul {
   padding: 5px 5px 5px 0px;
   font-size: 30px;
 }
+
+/*SIGN UP*/
 .howdoI {
-  background-color: white;
+  padding: 40px;
+  background: #f5f7f7;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 .howdoI img {
   margin: auto;
+}
+.howdoI a {
+  margin-top: 20px;
+}
+.howdoI input {
+  margin: 10px 0;
+  border: 1px solid; 
+  border-color: #d5d7d7;
 }
 
 .color-6 {
@@ -1960,8 +1977,8 @@ h5 {
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: #000000;
-  background: #ecf9ff;
+  color: #000000 !important;
+  background: #ecf9ff !important;
   border: 0;
   cursor: default;
 }
@@ -2124,6 +2141,9 @@ strong {
 /* Responsive */
 /* -------------------------------------------------- */
 @media (max-width: 979px) {
+  .inner-page {
+    padding-bottom: 30px;
+  }
   .navbar {
     background-color: rgba(0,0,0,0.6);
     max-height: 50px;
@@ -2132,19 +2152,10 @@ strong {
     background-color: rgba(0,0,0,0.6) !important;
     padding-top: 0px !important;
   }
-  .team {
-    height: 1150px;
-  }
   /* Layout */
   body {
     overflow-x: hidden;
     padding: 0;
-  }
-  .team li {
-    width: 45%;
-    padding: 0 5px;
-    margin-top: 0px;
-    margin-left: 0px;
   }
   #home,
   #sample-page {
@@ -2156,12 +2167,6 @@ strong {
   /* Typography */
   hr {
     margin: 10px auto;
-  }
-  .team2 {
-    margin-top: 120px;
-  }
-  .team img {
-    margin: 0 30px;
   }
   p {
     margin: 10px auto;
@@ -2259,11 +2264,6 @@ strong {
   }
   h3 {
     font-size: 24px;
-  }
-  .team img {
-    display: block;
-    margin: 20px ;
-    float: none;
   }
   .pull-left {
     float: none;

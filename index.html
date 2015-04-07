@@ -25,42 +25,133 @@
       <script src="/js/html5shiv.js"></script>
       <script src="/js/respond.min.js"></script>
       <![endif]-->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTbR3YcJI7ptSMWCQwav-rw-KzaW0SMic&sensor=false&extension=.js"></script>
 
-<script>
-  google.maps.event.addDomListener(window, 'load', init);
-  var map;
-  function init() {
-    var mapOptions = {
-      center: new google.maps.LatLng(10.410591,71.912841),
-      zoom: 1,
-      zoomControl: true,
-      zoomControlOptions: {
-          style: google.maps.ZoomControlStyle.SMALL,
-      },
-      disableDoubleClickZoom: true,
-      mapTypeControl: true,
-      mapTypeControlOptions: {
-          style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-      },
-      scaleControl: true,
-      scrollwheel: true,
-      panControl: false,
-      streetViewControl: false,
-      draggable : true,
-      overviewMapControl: true,
-      overviewMapControlOptions: {
-          opened: false,
-      },
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
-      styles: [{"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"color":"#f7f1df"}]},{"featureType":"landscape.natural","elementType":"geometry","stylers":[{"color":"#d0e3b4"}]},{"featureType":"landscape.natural.terrain","elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.medical","elementType":"geometry","stylers":[{"color":"#fbd3da"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#bde6ab"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffe15f"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#efd151"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"black"}]},{"featureType":"transit.station.airport","elementType":"geometry.fill","stylers":[{"color":"#cfb2db"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#a2daf2"}]}],
+<!-- Map link
+https://mapbuildr.com/buildr/34obzc -->
+<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBTbR3YcJI7ptSMWCQwav-rw-KzaW0SMic&sensor=false&extension=.js'></script> 
+ 
+<script> 
+    google.maps.event.addDomListener(window, 'load', init);
+    var map;
+    function init() {
+        var mapOptions = {
+            center: new google.maps.LatLng(11.501557,69.451903),
+            zoom: 2,
+            zoomControl: true,
+            zoomControlOptions: {
+                style: google.maps.ZoomControlStyle.SMALL,
+            },
+            disableDoubleClickZoom: true,
+            mapTypeControl: false,
+            scaleControl: false,
+            scrollwheel: false,
+            panControl: false,
+            streetViewControl: false,
+            draggable : true,
+            overviewMapControl: false,
+            overviewMapControlOptions: {
+                opened: false,
+            },
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            styles: [
+    {
+        "featureType": "water",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#b5cbe4"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "stylers": [
+            {
+                "color": "#efefef"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#83a5b0"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#bdcdd3"
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#e3eed3"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "lightness": 33
+            }
+        ]
+    },
+    {
+        "featureType": "road"
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "lightness": 20
+            }
+        ]
+    },
+    {},
+    {
+        "featureType": "road",
+        "stylers": [
+            {
+                "lightness": 20
+            }
+        ]
     }
-    var mapElement = document.getElementById('mapa');
-    var map = new google.maps.Map(mapElement, mapOptions);
-    var locations = [
-      ['Lx Factory', 'Rua Rodrigues de Faria 103, 1300 Lisboa, Portugal', 'undefined', 'undefined', 'undefined', 38.7035223, -9.178842700000018, 'https://mapbuildr.com/assets/img/markers/solid-pin-black.png'],['Lausanne Office', 'undefined', 'undefined', 'undefined', 'undefined', 46.5199617, 6.6335970999999745, 'https://mapbuildr.com/assets/img/markers/solid-pin-black.png'],['Melbourne Office', 'undefined', 'undefined', 'undefined', 'undefined', -37.735387, 145.01624100000004, 'https://mapbuildr.com/assets/img/markers/solid-pin-black.png']
+],
+        }
+        var mapElement = document.getElementById('mapa');
+        var map = new google.maps.Map(mapElement, mapOptions);
+        var locations = [
+['Lx Factory', 'Main office in Portugal<br />Rua Rodrigues de Faria 103, 1300 Lisboa', 'undefined', '', 'undefined', 38.7035223, -9.1788427, 'https://mapbuildr.com/assets/img/markers/solid-pin-black.png'],['Melbourne', 'Melbourne Office<br />4/2 Josephine Grove, Melbourne, 3072', 'undefined', 'undefined', 'undefined', -37.735387, 145.016241, 'https://mapbuildr.com/assets/img/markers/solid-pin-black.png'],['Lausanne', 'Lausanne Office<br />Rolex Learning Center', 'undefined', 'undefined', 'undefined', 46.5182757, 6.568256, 'https://mapbuildr.com/assets/img/markers/solid-pin-black.png']
         ];
-    for (i = 0; i < locations.length; i++) {
+        for (i = 0; i < locations.length; i++) {
       if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
       if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
       if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
@@ -76,44 +167,43 @@
                 email: email,
                 web: web
             });
-            link = '';
-            bindInfoWindow(marker, map, locations[i][0], description, telephone, email, web, link);
-    }
-    function bindInfoWindow(marker, map, title, desc, telephone, email, web, link) {
+link = '';            bindInfoWindow(marker, map, locations[i][0], description, telephone, email, web, link);
+     }
+ function bindInfoWindow(marker, map, title, desc, telephone, email, web, link) {
       var infoWindowVisible = (function () {
-        var currentlyVisible = false;
-        return function (visible) {
-          if (visible !== undefined) {
-            currentlyVisible = visible;
-          }
-          return currentlyVisible;
-        };
-      }());
-      iw = new google.maps.InfoWindow();
-      google.maps.event.addListener(marker, 'click', function() {
-        if (infoWindowVisible()) {
-          iw.close();
-          infoWindowVisible(false);
-        } else {
-          var html= "<div style='color:#000;background-color:#fff;padding:5px;width:150px;'><h4>"+title+"</h4></div>";
-          iw = new google.maps.InfoWindow({content:html});
-          iw.open(map,marker);
-          infoWindowVisible(true);
-        }
-      });
-      google.maps.event.addListener(iw, 'closeclick', function () {
-        infoWindowVisible(false);
-      });
-    }
-  }
+              var currentlyVisible = false;
+              return function (visible) {
+                  if (visible !== undefined) {
+                      currentlyVisible = visible;
+                  }
+                  return currentlyVisible;
+               };
+           }());
+           iw = new google.maps.InfoWindow();
+           google.maps.event.addListener(marker, 'click', function() {
+               if (infoWindowVisible()) {
+                   iw.close();
+                   infoWindowVisible(false);
+               } else {
+                   var html= "<div style='color:#000;background-color:#fff;padding:5px;width:150px;'><h4>"+title+"</h4><p>"+desc+"<p></div>";
+                   iw = new google.maps.InfoWindow({content:html});
+                   iw.open(map,marker);
+                   infoWindowVisible(true);
+               }
+        });
+        google.maps.event.addListener(iw, 'closeclick', function () {
+            infoWindowVisible(false);
+        });
+ }
+}
 </script>
 <style>
     #mapa {
         height:400px;
+        width:550px;
     }
     .gm-style-iw * {
         display: block;
-        width: 100%;
     }
     .gm-style-iw h4, .gm-style-iw p {
         margin: 0;
@@ -127,11 +217,11 @@
 
 <!-- activate scrollspy -->
 
-<body id="top" data-spy="scroll" data-target=".navbar" data-offset="50">
+<body href="#top" id="top" data-spy="scroll" data-target=".navbar" data-offset="50">
   <nav class="navbar navbar-default navbar-fixed-top home" role="navigation">
     <div class="navbar-container">
       <div class="navbar-header">
-        <a class="navbar-brand scroll" href="#home">
+        <a class="navbar-brand scroll">
           <img src="img/logo.png" alt="EventFuel" title="EventFuel" id="logo-img">
           <img src="img/brand.png" alt="EventFuel" title="EventFuel" id="logo-text">
         </a>
@@ -186,7 +276,7 @@
   </ul><!-- /.facts -->
 
   <!-- Feature page-->
-  <div id="features" class="page color-4">
+  <div id="features" class="page">
     <div class="inner-page row">
       <div class="col-md-12">
         <h2 class="page-headline center">Why choose EventFuel?</h2>
@@ -220,15 +310,16 @@
 
     <div class="row inner-page">
       <div class="features2 col-md-3 col-md-push-1">
-        <h3 class="page-headline">Instantly Customisable</h3>
+        <h3 class="page-headline">Top Features</h3>
         <p class="lead">Our team will help you create your own app to meet your needs and the demands of your event.</p>
         <ul class="list-wide ok">
           <li><i class="icon-uniE177"></i> Event Agenda</li>
-          <li><i class="icon-uniE177"></i> Speaker Bios</li>
           <li><i class="icon-uniE177"></i> Survey Questions</li>
           <li><i class="icon-uniE177"></i> Notes and Sketches</li>
           <li><i class="icon-uniE177"></i> Scheduled Polls</li>
-          <li><i class="icon-uniE177"></i> Attendee details</li>
+          <li><i class="icon-uniE177"></i> Notifications</li>
+          <li><i class="icon-uniE177"></i> Check in options</li>
+
         </ul>
       </div>
       <div class="col-md-8 col-md-push-1 lazy-container">
@@ -268,9 +359,10 @@
       </div>
     </div>
 
-    <div id="pricing" class="row inner-page">
-      <div class="col-md-12 sub-header">
+    <div id="pricing" class="row">
+      <div class="col-md-6 col-md-push-2 sub-header">
         <h3>Pricing</h3>
+        <p>We offer discounts for multiple events... blablabla so contact us to know more </p>
       </div>
     </div>
 
@@ -364,10 +456,11 @@
         </ul>
       </div>
     </div>
+  </div><!-- /#features -->
 
-    <div id="sign_up" class="page">
-      <div class="row inner-page howdoI">
-        <div class="col-md-4 col-md-offset-4">
+    <div id="sign_up" class="inner-page">
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4 howdoI">
           <img src="img/iconsmall.png" alt="EventFuel" title="EventFuel" id="logo">
           <h3 class="center">How do I get my app?</h3>
           <p>Once you sign up, our system will start creating a sample event for you. Once it is set up an email will be sent to you with a sample invitation</p>
@@ -379,13 +472,13 @@
         </div>
       </div>
     </div>
-  </div>
+
 
   <!-- Contact page -->
   <div id="contact" class="page color-2">
     <div class="row inner-page">
       <div class="col-md-6">
-        <h2 class="page-headline" style="color:white">Want to know more? Contact us</h2>
+        <h2 class="page-headline" style="color:white">Want to know more?</h2>
       </div>
     </div>
     <div class="row inner-page contact">
@@ -404,12 +497,11 @@
         <p>Now in Portugal, Switzerland and Australia!</p>
       </div>
     </div>
-    <div class="inner-page"></div>
   </div> <!-- /#contact -->
 
 
   <!-- The footer, social media icons, and copyright -->
-  <footer class="page color-5">
+  <footer class="color-5">
     <div class="inner-page row">
       <div class="col-md-6 social">
         <a href="https://twitter.com/eventfuel_io"><i class="icon-uniE213"></i></a>
