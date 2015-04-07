@@ -1742,9 +1742,6 @@ hr {
 ul {
   list-style: none;
 }
-.list-inline {
-  padding-left: 40px;
-}
 .list-inline li {
   display: inline-block;
   padding-bottom: 25px;

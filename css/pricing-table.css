@@ -9,6 +9,7 @@
 .pricing-table {
   font-family: 'Open Sans', sans-serif;
   position: relative;
+  padding-top: 7px;
 }
 .pricing-table .title,
 .pricing-table .price,
