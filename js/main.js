@@ -79,6 +79,7 @@ $(document).ready(function() {
     var setTopMenuStyle = function() {
         if($(document).scrollTop() < 300) {
             $(".navbar").removeClass("dark").addClass("home");
+            $(".nav li:first").removeClass('active');
         } else{
             $(".navbar").removeClass("home").addClass("dark");
         }
