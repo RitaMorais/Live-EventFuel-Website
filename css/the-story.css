@@ -1496,7 +1496,7 @@ a .icon-flip-vertical:before {
   color: #ffffff;
 }
 .color-2 {
-  background: #4d7ed8;
+  background: rgb(67, 142, 185);
   color: #ffffff;
 }
 .color-3 {
@@ -1696,11 +1696,11 @@ footer .inner-page, #contact .inner-page {
 }
 .active .brand-2 {
   color: white !important;
-  background-color: #4d7ed8 !important;
+  background-color: rgb(67, 142, 185) !important;
 }
 .brand-2:hover {
   color: white !important;
-  background-color: #4d7ed8 !important;
+  background-color: rgb(67, 142, 185) !important;
 }
 .active .brand-3 {
   color: white !important;
@@ -1826,7 +1826,7 @@ ul {
 }
 .howdoI input {
   margin: 10px 0;
-  border: 1px solid; 
+  border: 1px solid;
   border-color: #d5d7d7;
 }
 
@@ -1944,7 +1944,7 @@ h5 {
 }
 .panel .panel-heading {
   color: #ffffff;
-  background: #4baad3;
+  background: rgb(67, 142, 185);
 }
 .panel .panel-heading i {
   margin-top: 5px;
@@ -1960,7 +1960,7 @@ h5 {
 /* Tabs */
 .nav-tabs {
   border: 0;
-  background: #4baad3;
+  background: rgb(67, 142, 185);
   margin: 0;
 }
 .nav-tabs li a {
@@ -2012,7 +2012,7 @@ h5 {
   height: 50px;
 }
 .btn-home:hover, .btn-home:active{
-  color: #4d7ed8;
+  color: rgb(67, 142, 185);
   background-color: white;
 }
 
