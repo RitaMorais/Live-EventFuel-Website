@@ -1548,7 +1548,7 @@ a .icon-flip-vertical:before {
 
 .inner-page {
   padding-top: 30px;
-  padding-bottom: 150px;
+  padding-bottom: 50px;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -1597,33 +1597,11 @@ footer a {
 .sign-up h4 {
   font-size: 26px;
 }
-/* Graph */
+
 .graph {
-  padding-top: 0px !important;
-  margin-top: 0px !important;
-  padding-bottom: 20px !important;
+  text-align: center;
 }
-.graph h2 {
-  background-color: #ced2d4;
-  color: white;
-  padding: 0px 0px 10px 15px;
-}
-.graph h5, .graph h3, .graph li {
-  padding: 0px !important;
-}
-.evaluation h2 {
-  background-color: #3272b9;
-}
-.liveevent h2 {
-  background-color: #80a4b4;
-}
-.liveevent {
-  margin-bottom: 100px;
-}
-.graph img {
-  padding-top: 100px;
-  margin-bottom: -100px;
-}
+
 .video {
   padding: 50px 0;
   color: white;
