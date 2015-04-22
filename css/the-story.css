@@ -2171,6 +2171,22 @@ strong {
 /* Responsive */
 /* -------------------------------------------------- */
 @media (max-width: 979px) {
+  .graph ul {
+  padding-bottom: 40px;
+}
+.graph li i {
+  font-size: 20px;
+  padding-right: 10px;
+}
+.graph h2 i {
+  font-size: 20px;
+  padding-bottom: 15px;
+  padding-right: 10px;
+}
+.leftside ul {
+  padding-left: 0px !important;
+}
+
   .inner-page {
     padding-bottom: 30px;
   }
