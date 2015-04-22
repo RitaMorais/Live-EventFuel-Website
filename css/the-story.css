@@ -1598,8 +1598,29 @@ footer a {
   font-size: 26px;
 }
 
-.graph {
-  text-align: center;
+.graph ul {
+  padding-bottom: 120px;
+  padding-left: 0px;
+}
+.graph li i {
+  font-size: 50px;
+  vertical-align: middle;
+  display: inline-block;
+  float: left;
+  padding-right: 15px;
+}
+.graph h2 i {
+  vertical-align: middle;
+  font-size: 50px;
+  color: #0061d1;
+  padding-bottom: 30px;
+  padding-right: 15px;
+}
+.graph h2 {
+  color: #0061d1;
+}
+.leftside ul {
+  padding-left: 100px;
 }
 
 .video {
