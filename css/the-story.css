@@ -2171,21 +2171,31 @@ strong {
 /* Responsive */
 /* -------------------------------------------------- */
 @media (max-width: 979px) {
-  .graph ul {
-  padding-bottom: 40px;
+.graph ul {
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.graph h3 {
+  font-size: 18px;
+}
+.graph h5 {
+  font-size: 14px;
 }
 .graph li i {
-  font-size: 20px;
+  font-size: 30px;
   padding-right: 10px;
+  padding-bottom: 10px;
 }
-.graph h2 i {
-  font-size: 20px;
-  padding-bottom: 15px;
-  padding-right: 10px;
+
+.graph h2 {
+  text-align: center;
+  font-size: 24px;
 }
 .leftside ul {
-  padding-left: 0px !important;
+  padding-left: 5px;
 }
+
 
   .inner-page {
     padding-bottom: 30px;
@@ -2253,7 +2263,7 @@ strong {
   }
   .facts {
     display: inline-block;
-    height: 240px;
+    height: 300px;
     margin-bottom: 0px;
   }
   .navbar-toggle {
@@ -2295,6 +2305,10 @@ strong {
 }
 /* Mobile phone */
 @media (max-width: 420px) {
+
+h2 {
+ font-size: 24px !important;
+}
   .btn-map div {
     display: none;
   }
